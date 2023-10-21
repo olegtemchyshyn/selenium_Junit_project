@@ -15,7 +15,7 @@ public class LogInChromeBrowserTest {
         WebDriver driver = new ChromeDriver();
 
         //sleep
-        sleep(2000);
+        sleep(3000);
 
         //maximize browser window
         driver.manage().window().maximize();
