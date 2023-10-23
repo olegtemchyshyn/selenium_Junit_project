@@ -16,7 +16,7 @@ public class LogInFirefoxBrowserTest {
         WebDriver driver = new FirefoxDriver();
 
         //sleep
-        sleep(3000);
+        sleep(2000);
 
         //maximize browser window
         driver.manage().window().maximize();
@@ -37,7 +37,7 @@ public class LogInFirefoxBrowserTest {
         System.out.println("Password is typing");
 
         //sleep
-        sleep(2000);
+        sleep(3000);
 
         //Close browser
         driver.quit();
