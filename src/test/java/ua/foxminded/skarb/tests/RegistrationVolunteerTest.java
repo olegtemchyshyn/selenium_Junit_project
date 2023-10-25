@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class RegistrationVounteerTest {
+public class RegistrationVolunteerTest {
 
     @Test
     public void registerVolunteer() {
@@ -16,7 +16,7 @@ public class RegistrationVounteerTest {
         // Create driver WebDriver
         WebDriver driver = new ChromeDriver();
 
-        // Maximize
+        // Maximize window
         driver.manage().window().maximize();
 
         //open URL
@@ -46,7 +46,6 @@ public class RegistrationVounteerTest {
         confirmPassword.sendKeys("TEst@1234");
         System.out.println("Password & Confirmation are written");
 
-
         //Select category
         WebElement category = driver.findElement(By.id("categories"));
         Select select = new Select(category);
@@ -74,7 +73,6 @@ public class RegistrationVounteerTest {
 
         //Close browser
         driver.quit();
-
 
     }
 
