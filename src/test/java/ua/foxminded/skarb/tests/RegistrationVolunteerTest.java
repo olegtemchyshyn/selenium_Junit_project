@@ -1,5 +1,6 @@
 package ua.foxminded.skarb.tests;
 
+import org.instancio.Random;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -29,26 +30,27 @@ public class RegistrationVolunteerTest {
         //First name
         WebElement firstName = driver.findElement(By.id("firstName"));
         String randomFirstName = generateFirstName();
-        firstName.sendKeys("randomFirstName");
+        firstName.sendKeys(randomFirstName);
         System.out.println("First name is written: " + randomFirstName);
 
         //Last name
         WebElement lastName = driver.findElement(By.id("lastName"));
         String randomLastName = generateLastName();
-        lastName.sendKeys("randomLastName");
+        lastName.sendKeys(randomLastName);
         System.out.println("Last name is written: " + randomLastName);
 
         //Email
         WebElement email = driver.findElement(By.id("email"));
         String randomEmail = generateEmail();
-        email.sendKeys("randomEmail");
+        email.sendKeys(randomEmail);
         System.out.println("Email is written: " + randomEmail);
 
         //Password & Confirmation
         WebElement password = driver.findElement(By.id("password"));
         WebElement confirmPassword = driver.findElement(By.id("confirmPassword"));
-        password.sendKeys("TEst@1234");
-        confirmPassword.sendKeys("TEst@1234");
+        String randomPassword = generatePassword();
+        password.sendKeys(randomPassword);
+        confirmPassword.sendKeys(randomPassword);
         System.out.println("Password & Confirmation are written");
 
         //Select category
