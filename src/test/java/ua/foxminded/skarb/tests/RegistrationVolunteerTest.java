@@ -1,11 +1,14 @@
 package ua.foxminded.skarb.tests;
 
+import org.instancio.Random;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+
+import static ua.foxminded.skarb.utils.VolunteerDataGenerator.*;
 
 public class RegistrationVolunteerTest {
 
@@ -26,24 +29,28 @@ public class RegistrationVolunteerTest {
 
         //First name
         WebElement firstName = driver.findElement(By.id("firstName"));
-        firstName.sendKeys("Ol");
-        System.out.println("First name is written");
+        String randomFirstName = generateFirstName();
+        firstName.sendKeys(randomFirstName);
+        System.out.println("First name is written: " + randomFirstName);
 
         //Last name
         WebElement lastName = driver.findElement(By.id("lastName"));
-        lastName.sendKeys("Te");
-        System.out.println("Last name is written");
+        String randomLastName = generateLastName();
+        lastName.sendKeys(randomLastName);
+        System.out.println("Last name is written: " + randomLastName);
 
         //Email
         WebElement email = driver.findElement(By.id("email"));
-        email.sendKeys("exemple@gmail.com");
-        System.out.println("Email is written");
+        String randomEmail = generateEmail();
+        email.sendKeys(randomEmail);
+        System.out.println("Email is written: " + randomEmail);
 
         //Password & Confirmation
         WebElement password = driver.findElement(By.id("password"));
         WebElement confirmPassword = driver.findElement(By.id("confirmPassword"));
-        password.sendKeys("TEst@1234");
-        confirmPassword.sendKeys("TEst@1234");
+        String randomPassword = generatePassword();
+        password.sendKeys(randomPassword);
+        confirmPassword.sendKeys(randomPassword);
         System.out.println("Password & Confirmation are written");
 
         //Select category
