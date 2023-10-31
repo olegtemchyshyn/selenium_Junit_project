@@ -9,11 +9,10 @@ import org.openqa.selenium.support.ui.Select;
 
 import static ua.foxminded.skarb.utils.DataGenerator.*;
 
-public class RegistrationVolunteerTest {
-
+public class RegistrationPartnerTest {
     @Test
-    public void registerVolunteer() {
-        System.out.println("Starting register a Volunteer");
+    public void registerPartner() {
+        System.out.println("Starting register a Partner");
 
         // Create driver WebDriver
         WebDriver driver = new ChromeDriver();
@@ -22,9 +21,15 @@ public class RegistrationVolunteerTest {
         driver.manage().window().maximize();
 
         //open URL
-        String url = "https://skarb.foxminded.ua/registration/volunteers";
+        String url = "https://skarb.foxminded.ua/registration/partners?";
         driver.get(url);
-        System.out.println("Volunteer page is open");
+        System.out.println("Partner page is open");
+
+        //Email
+        WebElement email = driver.findElement(By.xpath("//input[@name='email']"));
+        String randomEmail = generateEmail();
+        email.sendKeys(randomEmail);
+        System.out.println("Email is written: " + randomEmail);
 
         //First name
         WebElement firstName = driver.findElement(By.xpath("//input[@name='firstName']"));
@@ -38,11 +43,10 @@ public class RegistrationVolunteerTest {
         lastName.sendKeys(randomLastName);
         System.out.println("Last name is written: " + randomLastName);
 
-        //Email
-        WebElement email = driver.findElement(By.xpath("//input[@name='email']"));
-        String randomEmail = generateEmail();
-        email.sendKeys(randomEmail);
-        System.out.println("Email is written: " + randomEmail);
+        //Sex radio button
+        WebElement sex = driver.findElement(By.xpath("//input[@id='female']"));
+        sex.click();
+        System.out.println("Sex is chosen");
 
         //Password & Confirmation
         WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
@@ -52,30 +56,29 @@ public class RegistrationVolunteerTest {
         confirmPassword.sendKeys(randomPassword);
         System.out.println("Password & Confirmation are written");
 
+        //Organization full name
+        WebElement organizationName = driver.findElement(By.xpath("//input[@id='organizationName']"));
+        String randomOrganizationName = generateOrganizationName();
+        organizationName.sendKeys(randomOrganizationName);
+        System.out.println("Organization name is written: " + randomOrganizationName);
+
         //Select category
-        WebElement category = driver.findElement(By.xpath("//select[@id='categories']"));
+        WebElement category = driver.findElement(By.xpath("//select[@id='categoryIds']"));
         Select select = new Select(category);
-        select.selectByIndex(4);
+        select.selectByIndex(5);
         select.selectByVisibleText("Programming");
         System.out.println("Category is chosen");
 
-        //Sleep
+        //Type partners' occupation
+        WebElement position = driver.findElement(By.xpath("//input[@name='positionInOrganization']"));
+        position.sendKeys("manager");
+        System.out.println("Position is written");
+
         sleep(2000);
 
         // Complete registration. Click Sign Up
-        WebElement signUpButton = driver.findElement(By.name("submit"));
+        WebElement signUpButton = driver.findElement(By.xpath("//button[@name='submit']"));
         signUpButton.click();
-
-        //Sleep
-        sleep(2000);
-
-        // Check success message
-        WebElement successContent = driver.findElement(By.id("content"));
-        if (successContent.getText().contains("Congratulation!")) {
-            System.out.println("Registration was successful!");
-        } else {
-            System.out.println("Registration failed!");
-        }
 
         //Close browser
         driver.quit();
@@ -89,5 +92,5 @@ public class RegistrationVolunteerTest {
             e.printStackTrace();
         }
     }
-
 }
+
