@@ -7,13 +7,13 @@ public class DataGenerator {
     static Random random = new Random();
 
     public static String generateFirstName() {
-        String[] firstNames = {"Oleh", "Pavel", "Emily", "John", "Boho"};
+        String[] firstNames = {"Wayne", "Igor", "Samen", "Rushabh", "Vasyl"};
         int randomIndex = random.nextInt(firstNames.length);
         return firstNames[randomIndex];
     }
 
     public static String generateLastName() {
-        String[] lastNames = {"Jones", "Miller", "Garcia", "Williams", "Campbell"};
+        String[] lastNames = {"Downloap", "Toury", "Chhavi", "Nuaman", "Binboa"};
         int randomIndex = random.nextInt(lastNames.length);
         return lastNames[randomIndex];
     }
@@ -31,8 +31,14 @@ public class DataGenerator {
     }
 
     public static String generateOrganizationName() {
-        String[] organization = {"NATO", "UN", "Google", "MicroSoft", "IAS", "UPA"};
+        String[] organization = {"AAGGGGA", "VVPPPPQ", "HHTT", "AAKKKKVB", "XXUUUUI", "EELLLLK"};
         int randomIndex = random.nextInt(organization.length);
         return organization[randomIndex];
+    }
+
+    public static String domainCorporate() {
+        String domain = "@skarb.ngo";
+        return domain;
+
     }
 }
