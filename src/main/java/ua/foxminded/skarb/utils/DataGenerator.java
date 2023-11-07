@@ -7,13 +7,13 @@ public class DataGenerator {
     static Random random = new Random();
 
     public static String generateFirstName() {
-        String[] firstNames = {"Wayne", "Igor", "Samen", "Rushabh", "Vasyl"};
+        String[] firstNames = {"Wayneee", "Igorrr", "Samennn", "Rushabhhh", "Vasylll"};
         int randomIndex = random.nextInt(firstNames.length);
         return firstNames[randomIndex];
     }
 
     public static String generateLastName() {
-        String[] lastNames = {"Downloap", "Toury", "Chhavi", "Nuaman", "Binboa"};
+        String[] lastNames = {"Downloaper", "Mtcoury", "Ccdhhavi", "Gruaman", "Neinboa"};
         int randomIndex = random.nextInt(lastNames.length);
         return lastNames[randomIndex];
     }
@@ -31,7 +31,7 @@ public class DataGenerator {
     }
 
     public static String generateOrganizationName() {
-        String[] organization = {"AAGGGGA", "VVPPPPQ", "HHTT", "AAKKKKVB", "XXUUUUI", "EELLLLK"};
+        String[] organization = {"CALLI", "HAPPUA", "HSG", "FHGF", "JKJL", "SEDSFDH"};
         int randomIndex = random.nextInt(organization.length);
         return organization[randomIndex];
     }

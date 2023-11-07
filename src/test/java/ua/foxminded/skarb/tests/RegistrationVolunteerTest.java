@@ -1,5 +1,6 @@
 package ua.foxminded.skarb.tests;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
+
+import static org.junit.Assert.assertEquals;
 import static ua.foxminded.skarb.utils.DataGenerator.*;
 
 public class RegistrationVolunteerTest {
@@ -59,23 +63,26 @@ public class RegistrationVolunteerTest {
         select.selectByVisibleText("Programming");
         System.out.println("Category is chosen");
 
-        //Sleep
-        sleep(2000);
+        //Implicit waite
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 
         // Complete registration. Click Sign Up
         WebElement signUpButton = driver.findElement(By.name("submit"));
         signUpButton.click();
 
-        //Sleep
-        sleep(2000);
+        //Verification, new URL verification
+        String expectedUrl = "https://skarb.foxminded.ua/registration/result/success";
+        String actualUrl = driver.getCurrentUrl();
+        Assert.assertEquals("Actual page URL is not the same as expected", expectedUrl, actualUrl);
 
         // Check success message
         WebElement successContent = driver.findElement(By.id("content"));
-        if (successContent.getText().contains("Congratulation!")) {
+        Assert.assertTrue("Success message is not present on the page", successContent.isDisplayed());
+        /*if (successContent.getText().contains("Congratulation!")) {
             System.out.println("Registration was successful!");
         } else {
             System.out.println("Registration failed!");
-        }
+        }*/
 
         //Close browser
         driver.quit();

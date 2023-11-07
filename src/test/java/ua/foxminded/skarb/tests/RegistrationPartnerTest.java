@@ -27,7 +27,7 @@ public class RegistrationPartnerTest {
         System.out.println("Home page is open");
 
         //click registration button on the page
-        WebElement registrationIcon = driver.findElement(By.xpath("//i[@class='fa fa-user-plus fa-3x text-dark-red']"));
+        WebElement registrationIcon = driver.findElement(By.xpath("//a[@href='/registration']//i"));
         registrationIcon.click();
 
         //click register as "Partner"
@@ -40,40 +40,40 @@ public class RegistrationPartnerTest {
         String randomLastName = generateLastName();
 
         //Email
-        WebElement email = driver.findElement(By.xpath("//input[@name='email']"));
+        WebElement emailInputField = driver.findElement(By.xpath("//input[@name='email']"));
         String domain = domainCorporate();
         String randomEmail = randomFirstName + "." + randomLastName + domain;
-        email.sendKeys(randomEmail);
+        emailInputField.sendKeys(randomEmail);
         System.out.println("Email is written: " + randomEmail);
 
         //Implicit waite
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 
         //First name
-        WebElement firstName = driver.findElement(By.xpath("//input[@name='firstName']"));
-        firstName.sendKeys(randomFirstName);
+        WebElement firstNameInputField = driver.findElement(By.xpath("//input[@name='firstName']"));
+        firstNameInputField.sendKeys(randomFirstName);
         System.out.println("First name is written: " + randomFirstName);
 
         //Last name
-        WebElement lastName = driver.findElement(By.xpath("//input[@id='lastName']"));
-        lastName.sendKeys(randomLastName);
+        WebElement lastNameInputField = driver.findElement(By.id("lastName"));
+        lastNameInputField.sendKeys(randomLastName);
         System.out.println("Last name is written: " + randomLastName);
 
         //Sex radio button
-        WebElement sex = driver.findElement(By.xpath("//input[@id='female']"));
-        sex.click();
-        System.out.println("Sex is chosen");
+        WebElement femaleSexRadioButton = driver.findElement(By.id("female"));
+        femaleSexRadioButton.click();
+        System.out.println("Sex:Female is chosen");
 
         //Password & Confirmation
-        WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
-        WebElement confirmPassword = driver.findElement(By.xpath("//input[@id='confirmPassword']"));
+        WebElement password = driver.findElement(By.id("password"));
+        WebElement confirmPassword = driver.findElement(By.id("confirmPassword"));
         String randomPassword = generatePassword();
         password.sendKeys(randomPassword);
         confirmPassword.sendKeys(randomPassword);
         System.out.println("Password & Confirmation are written");
 
         //Organization full name
-        WebElement organizationName = driver.findElement(By.xpath("//input[@id='organizationName']"));
+        WebElement organizationName = driver.findElement(By.id("organizationName"));
         String randomOrganizationName = generateOrganizationName();
         organizationName.sendKeys(randomOrganizationName);
         System.out.println("Organization name is written: " + randomOrganizationName);
@@ -83,7 +83,7 @@ public class RegistrationPartnerTest {
         Select select = new Select(category);
         select.selectByIndex(5);
         select.selectByVisibleText("Programming");
-        System.out.println("Category is chosen");
+        System.out.println("'Programming' category is chosen");
 
         //Type partners' occupation
         WebElement position = driver.findElement(By.xpath("//input[@name='positionInOrganization']"));
@@ -97,8 +97,6 @@ public class RegistrationPartnerTest {
         WebElement signUpButton = driver.findElement(By.xpath("//button[@name='submit']"));
         signUpButton.click();
         System.out.println("Sign Up button is clicked.");
-
-        sleep(6000);
 
         //Implicit waite
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -117,7 +115,6 @@ public class RegistrationPartnerTest {
 
         //Implicit waite
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        sleep(10000);
 
         //Click on recently recived email   //randomEmail
         WebElement emailMessage = driver.findElement(By.xpath("//div[@class='msglist-message row ng-scope']//div[contains(text(),'a few seconds ago')]"));
@@ -150,5 +147,9 @@ public class RegistrationPartnerTest {
             e.printStackTrace();
         }
     }
+    /*public void refreshPage(int times) {
+       int i = 4;
+
+    }*/
 }
 
