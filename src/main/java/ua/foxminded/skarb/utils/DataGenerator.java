@@ -1,5 +1,7 @@
 package ua.foxminded.skarb.utils;
 
+import org.apache.commons.lang.RandomStringUtils;
+
 import java.util.Random;
 
 public class DataGenerator {
@@ -7,13 +9,13 @@ public class DataGenerator {
     static Random random = new Random();
 
     public static String generateFirstName() {
-        String[] firstNames = {"Oleh", "Pavel", "Emily", "John", "Boho"};
+        String[] firstNames = {"Wayneee", "Igorrr", "Samennn", "Rushabhhh", "Vasylll"};
         int randomIndex = random.nextInt(firstNames.length);
         return firstNames[randomIndex];
     }
 
     public static String generateLastName() {
-        String[] lastNames = {"Jones", "Miller", "Garcia", "Williams", "Campbell"};
+        String[] lastNames = {"Downloaper", "Mtcoury", "Ccdhhavi", "Gruaman", "Neinboa"};
         int randomIndex = random.nextInt(lastNames.length);
         return lastNames[randomIndex];
     }
@@ -31,8 +33,28 @@ public class DataGenerator {
     }
 
     public static String generateOrganizationName() {
-        String[] organization = {"NATO", "UN", "Google", "MicroSoft", "IAS", "UPA"};
+        String[] organization = {"CALLI", "HAPPUA", "HSG", "FHGF", "JKJL", "SEDSFDH"};
         int randomIndex = random.nextInt(organization.length);
         return organization[randomIndex];
     }
+
+    public static String domainCorporate() {
+        String domain = "@skarb.ngo";
+        return domain;
+    }
+
+    public static String dataGenerator(int length) {
+        String randomData = RandomStringUtils.random(length -1, "abcdefghijklmnopqrstuwvxyz");
+        char firstChar = Character.toUpperCase(randomData.charAt(0));
+        return firstChar + randomData.substring(1);
+    }
+
+    public static String companyNameGenerator(int lenght) {
+        return RandomStringUtils.random(lenght,"ABCDEFGHIGKLMNOPQRSTUVWXYZ");
+
+    }
+
+
+
+
 }
