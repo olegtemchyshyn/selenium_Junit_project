@@ -1,5 +1,7 @@
 package ua.foxminded.skarb.utils;
 
+import org.apache.commons.lang.RandomStringUtils;
+
 import java.util.Random;
 
 public class DataGenerator {
@@ -39,6 +41,20 @@ public class DataGenerator {
     public static String domainCorporate() {
         String domain = "@skarb.ngo";
         return domain;
+    }
+
+    public static String dataGenerator(int length) {
+        String randomData = RandomStringUtils.random(length -1, "abcdefghijklmnopqrstuwvxyz");
+        char firstChar = Character.toUpperCase(randomData.charAt(0));
+        return firstChar + randomData.substring(1);
+    }
+
+    public static String companyNameGenerator(int lenght) {
+        return RandomStringUtils.random(lenght,"ABCDEFGHIGKLMNOPQRSTUVWXYZ");
 
     }
+
+
+
+
 }

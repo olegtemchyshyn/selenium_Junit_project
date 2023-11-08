@@ -1,5 +1,6 @@
 package ua.foxminded.skarb.tests;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import java.time.Duration;
-import static ua.foxminded.skarb.utils.DataGenerator.*;
 
+import java.time.Duration;
+
+import static ua.foxminded.skarb.utils.DataGenerator.*;
 public class RegistrationPartnerTest {
     @Test
     public void registerPartner() {
@@ -36,8 +38,8 @@ public class RegistrationPartnerTest {
         System.out.println("Register as 'Partner' is chosen");
 
         //generate random first name and last name
-        String randomFirstName = generateFirstName();
-        String randomLastName = generateLastName();
+        String randomFirstName = dataGenerator(6);
+        String randomLastName = dataGenerator(7);
 
         //Email
         WebElement emailInputField = driver.findElement(By.xpath("//input[@name='email']"));
@@ -74,7 +76,7 @@ public class RegistrationPartnerTest {
 
         //Organization full name
         WebElement organizationName = driver.findElement(By.id("organizationName"));
-        String randomOrganizationName = generateOrganizationName();
+        String randomOrganizationName = companyNameGenerator(4);
         organizationName.sendKeys(randomOrganizationName);
         System.out.println("Organization name is written: " + randomOrganizationName);
 
@@ -107,20 +109,22 @@ public class RegistrationPartnerTest {
         driver.get("https://skarbmail.foxminded.ua/");
         System.out.println("Mail tab is open");
 
-        //Refresh the page
-        driver.navigate().refresh();
-
-        //Refresh the page
-        driver.navigate().refresh();
-
         //Implicit waite
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        //Click on recently recived email   //randomEmail
-        WebElement emailMessage = driver.findElement(By.xpath("//div[@class='msglist-message row ng-scope']//div[contains(text(),'a few seconds ago')]"));
-        //driver.findElement(By.linkText(randomEmail));
+        //Find recently received email
+        WebElement emailMessage = null;
+        while (emailMessage == null) {
+            try {
+                emailMessage = driver.findElement(By.xpath("//div[@class='msglist-message row ng-scope']//div[contains(text(),'a few seconds ago')]"));
+            } catch (org.openqa.selenium.NoSuchElementException e) {
+                driver.navigate().refresh();
+            }
+        }
+
+        // Email message is visible, click on it
         emailMessage.click();
-        System.out.println("Email is found");
+        System.out.println("Driver found registration confirmation email");
 
         //Implicit waite
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
@@ -128,12 +132,7 @@ public class RegistrationPartnerTest {
         //Looking for confirmation link
         WebElement confirmationLink = driver.findElement(By.xpath("//div[@class='tab-pane ng-binding active']//a[@target='_blank']"));
         confirmationLink.click();
-
-        //Implicit waite
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-
-        //sweech to main window
-        driver.switchTo().window(initHandle);
+        System.out.println(randomFirstName + " your email is confirmed. Congratulation!");
 
         //Close browser
         driver.quit();
@@ -147,9 +146,5 @@ public class RegistrationPartnerTest {
             e.printStackTrace();
         }
     }
-    /*public void refreshPage(int times) {
-       int i = 4;
-
-    }*/
 }
 

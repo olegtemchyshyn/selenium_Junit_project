@@ -1,5 +1,6 @@
 package ua.foxminded.skarb.tests;
 
+import org.apache.commons.lang.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
