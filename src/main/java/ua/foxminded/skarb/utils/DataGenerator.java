@@ -20,10 +20,9 @@ public class DataGenerator {
         return lastNames[randomIndex];
     }
 
-    public static String generateEmail() {
-        String[] emails = {"john.doe1@example.com", "sarah.smith1@example.com", "michael.jones1@example.com", "daniel.clark1@example.net", "emily.wilson1@example.net"};
-        int randomIndex = random.nextInt(emails.length);
-        return emails[randomIndex];
+    public static String domainExample() {
+        String domainExamp = "@example.com" ;
+        return domainExamp;
     }
 
     public static String generatePassword() {
@@ -39,8 +38,8 @@ public class DataGenerator {
     }
 
     public static String domainCorporate() {
-        String domain = "@skarb.ngo";
-        return domain;
+        String domainCorp = "@skarb.ngo";
+        return domainCorp;
     }
 
     public static String dataGenerator(int length) {
@@ -53,8 +52,5 @@ public class DataGenerator {
         return RandomStringUtils.random(lenght,"ABCDEFGHIGKLMNOPQRSTUVWXYZ");
 
     }
-
-
-
 
 }
