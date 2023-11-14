@@ -5,14 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import ua.foxminded.skarb.utils.BasePage;
+import ua.foxminded.skarb.utils.BaseTest;
 
-import java.time.Duration;
-
-public class MailHogPage extends BasePage {
+public class MailHogTest extends BaseTest {
     private WebDriver driver;
     @FindBy(xpath = "//div[@id='content']//h3[@class='display-3 text-center']")
     private WebElement emailConfirmationContentElement;
@@ -21,7 +16,7 @@ public class MailHogPage extends BasePage {
     @FindBy(xpath = "//div[@class='tab-pane ng-binding active']//a[@target='_blank']")
     private WebElement confirmationLinkElement;
 
-    public MailHogPage(WebDriver driver) {
+    public MailHogTest(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -43,11 +38,14 @@ public class MailHogPage extends BasePage {
 
     public void clickConfirmationLink() {
         confirmationLinkElement.click();
+        System.out.println("Confirmation link clicked");
     }
 
-    public NewConfirmationPage switchToNewConfirmationPage() {
+    public NewConfirmationTest switchToNewConfirmationPage() {
         switchToWindowWithTitle("Registration");
-        return new NewConfirmationPage(driver);
+        System.out.println("Switch to new confirmation page");
+        return new NewConfirmationTest(driver);
+
     }
 }
 
