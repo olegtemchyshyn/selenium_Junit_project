@@ -3,22 +3,32 @@ package ua.foxminded.skarb.tests;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ua.foxminded.skarb.pages.*;
 import ua.foxminded.skarb.utils.BasePage;
 
 import java.time.Duration;
-public class PartnerRegistrationPage extends BasePage {
+import java.util.Iterator;
+import java.util.Set;
+
+public class PartnerRegistrationTest extends BasePage{
     @Test
     public void registerPartner() {
         System.out.println("Starting register a Partner");
 
         //Open Home page URL. Click Plus Button
-        String homePageUrl = "https://skarb.foxminded.ua";
+        String homePageUrl = "https://skarb.foxminded.ua/";
         driver.get(homePageUrl);
+        //Assertion to check if the current URL is open
+        Assert.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), homePageUrl);
         System.out.println("Page opened");
         HomePage homePage = new HomePage(driver);
         homePage.clickPlusButton();
+
 
         //click register as "Partner"(instance of RegistrationPage )
         RegistrationPage registrationPage = new RegistrationPage(driver);
@@ -26,13 +36,13 @@ public class PartnerRegistrationPage extends BasePage {
 
         //Complete the fields on the registration form.
         PartnersSignUpPage partnersSignUpPage = new PartnersSignUpPage(driver);
-        partnersSignUpPage.enterEmail();
-        partnersSignUpPage.enterFirstName();
-        partnersSignUpPage.enterLastName();
+        partnersSignUpPage.inputRandomEmail();
+        partnersSignUpPage.inputRandomFirstName();
+        partnersSignUpPage.inputRandomLastName();
         partnersSignUpPage.clickFemaleRondoButon();
-        partnersSignUpPage.enterPasswords();
+        partnersSignUpPage.inputRandomPasswords();
         partnersSignUpPage.enterOrganizationName();
-        partnersSignUpPage.selectCategory();
+        partnersSignUpPage.selectProgrammingCategory();
         partnersSignUpPage.enterPossition();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
         partnersSignUpPage.clickSignUpButton();
@@ -52,6 +62,10 @@ public class PartnerRegistrationPage extends BasePage {
         MailHogPage mailHogPage = new MailHogPage(driver);
         mailHogPage.recentEmailMessage();
         mailHogPage.clickConfirmationLink();
+       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+        NewConfirmationPage newConfirmationPage = mailHogPage.switchToNewConfirmationPage();
+        String pageSource = newConfirmationPage.getCurrentPageSource();
+        Assert.assertTrue("Email has not been confirmed", pageSource.contains("Your email confirmed!"));
         System.out.println("Your email is confirmed. Congratulation!");
     }
 }

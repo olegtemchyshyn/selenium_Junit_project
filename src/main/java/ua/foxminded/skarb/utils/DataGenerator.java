@@ -5,7 +5,6 @@ import org.apache.commons.lang.RandomStringUtils;
 import java.util.Random;
 
 public class DataGenerator {
-
     static Random random = new Random();
 
     public static String generateFirstName() {

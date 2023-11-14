@@ -1,6 +1,5 @@
 package ua.foxminded.skarb.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +10,9 @@ import static ua.foxminded.skarb.utils.DataGenerator.*;
 
 public class PartnersSignUpPage {
     private WebDriver driver;
-    private By signUpButton = By.xpath("//button[@name='submit']");
+
+    @FindBy (xpath = "//button[@name='submit']")
+    private WebElement signUpButton;
     @FindBy(id = "email")
     private WebElement emailElement;
     @FindBy(id = "firstName")
@@ -37,26 +38,25 @@ public class PartnersSignUpPage {
     String randomPassword = generatePassword();
     String randomOrganizationName = companyNameGenerator(4);
 
-
     public PartnersSignUpPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     // Enter random email
-    public void enterEmail() {
+    public void inputRandomEmail() {
         emailElement.sendKeys(randomEmail);
         System.out.println("Email is written: " + randomEmail);
     }
 
     // enter random first name
-    public void enterFirstName() {
+    public void inputRandomFirstName() {
         firstNameElement.sendKeys(randomFirstName);
         System.out.println("First name is written: " + randomFirstName);
     }
 
     // enter random last name
-    public void enterLastName() {
+    public void inputRandomLastName() {
         lastNameElement.sendKeys(randomLastName);
         System.out.println("Last name is written: " + randomLastName);
     }
@@ -68,7 +68,7 @@ public class PartnersSignUpPage {
     }
 
     // enter password and confirmation
-    public void enterPasswords() {
+    public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
         System.out.println("Password & Confirmation are written");
@@ -81,7 +81,7 @@ public class PartnersSignUpPage {
     }
 
     // Select category "Programming"
-    public void selectCategory() {
+    public void selectProgrammingCategory() {
         Select select = new Select(categoryElement);
         select.selectByIndex(5);
         select.selectByVisibleText("Programming");
@@ -97,7 +97,7 @@ public class PartnersSignUpPage {
 
     // Complete registration. Click Sign Up
     public CongratsNgoPage clickSignUpButton() {
-        driver.findElement(signUpButton).click();
+        signUpButton.click();
         System.out.println("Sign Up button is clicked.");
         return new CongratsNgoPage(driver);
     }
