@@ -75,7 +75,7 @@ public class PartnersSignUpPage {
     }
 
     // enter organization random name
-    public void enterOrganizationName() {
+    public void inputRandomOrganizationName() {
         organizationNameElement.sendKeys(randomOrganizationName);
         System.out.println("Organization name is written: " + randomOrganizationName);
     }
@@ -92,7 +92,6 @@ public class PartnersSignUpPage {
     public void enterPossition() {
         positionInOrganizationElement.sendKeys("Manager");
         System.out.println("Position 'Manager' is written");
-
     }
 
     // Complete registration. Click Sign Up

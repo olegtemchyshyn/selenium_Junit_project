@@ -36,32 +36,32 @@ public class VolunteersSignUpPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void enterEmail() {
+    public void inputRandomEmailmail() {
         emailElement.sendKeys(randomEmail);
         System.out.println("Email is written: " + randomEmail);
     }
 
     // enter random first name
-    public void enterFirstName() {
+    public void inputRandomFirstName() {
         firstNameElement.sendKeys(randomFirstName);
         System.out.println("First name is written: " + randomFirstName);
     }
 
     // enter random last name
-    public void enterLastName() {
+    public void inputRandomLastName() {
         lastNameElement.sendKeys(randomLastName);
         System.out.println("Last name is written: " + randomLastName);
     }
 
     // enter password and confirmation
-    public void enterPasswords() {
+    public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
         System.out.println("Password & Confirmation are written");
     }
 
     // Select category "Programming"
-    public void selectCategory() {
+    public void selectProgrammingCategory() {
         Select select = new Select(categoryElement);
         select.selectByIndex(4);
         select.selectByVisibleText("Programming");

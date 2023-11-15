@@ -16,11 +16,9 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    // Open Home page Url
     public RegistrationPage clickPlusButton() {
         registrationPlusButton.click();
         return new RegistrationPage(driver);
     }
-
 
 }

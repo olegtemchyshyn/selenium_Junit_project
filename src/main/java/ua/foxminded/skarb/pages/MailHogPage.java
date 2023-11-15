@@ -7,8 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ua.foxminded.skarb.utils.BaseTest;
 
-public class MailHogTest extends BaseTest {
+public class MailHogPage extends BaseTest {
     private WebDriver driver;
+
     @FindBy(xpath = "//div[@id='content']//h3[@class='display-3 text-center']")
     private WebElement emailConfirmationContentElement;
     @FindBy(xpath = "//div[@class='msglist-message row ng-scope']//div[contains(text(),'a few seconds ago')]")
@@ -16,7 +17,7 @@ public class MailHogTest extends BaseTest {
     @FindBy(xpath = "//div[@class='tab-pane ng-binding active']//a[@target='_blank']")
     private WebElement confirmationLinkElement;
 
-    public MailHogTest(WebDriver driver) {
+    public MailHogPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -41,11 +42,5 @@ public class MailHogTest extends BaseTest {
         System.out.println("Confirmation link clicked");
     }
 
-    public NewConfirmationTest switchToNewConfirmationPage() {
-        switchToWindowWithTitle("Registration");
-        System.out.println("Switch to new confirmation page");
-        return new NewConfirmationTest(driver);
-
-    }
 }
 
