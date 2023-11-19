@@ -8,13 +8,14 @@ import ua.foxminded.skarb.utils.BaseTest;
 
 import java.util.Set;
 
-public class NewConfirmationPage extends BaseTest {
+public class NewConfirmationPage extends BasePageObject {
     private WebDriver driver;
 
     @FindBy(xpath = "//div[@class='alert alert-success']//h3[@class='display-3 text-center']")
     private WebElement confirmationMessage;
 
     public NewConfirmationPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -22,6 +23,11 @@ public class NewConfirmationPage extends BaseTest {
     public WebElement getConfirmationMessage() {
         return confirmationMessage;
     }
+
+    public void waitForConfirmationMessage() {
+        waitForVisibilityOf(confirmationMessage, 10);
+    }
+
 
     public void switchToLastTab() {
         Set<String> allWindows = driver.getWindowHandles();

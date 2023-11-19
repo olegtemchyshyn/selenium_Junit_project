@@ -8,10 +8,10 @@ import org.openqa.selenium.support.ui.Select;
 
 import static ua.foxminded.skarb.utils.DataGenerator.*;
 
-public class PartnersSignUpPage {
+public class PartnersSignUpPage extends BasePageObject {
     private WebDriver driver;
 
-    @FindBy (xpath = "//button[@name='submit']")
+    @FindBy(xpath = "//button[@name='submit']")
     private WebElement signUpButton;
     @FindBy(id = "email")
     private WebElement emailElement;
@@ -39,59 +39,68 @@ public class PartnersSignUpPage {
     String randomOrganizationName = companyNameGenerator(4);
 
     public PartnersSignUpPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     // Enter random email
-    public void inputRandomEmail() {
+    public PartnersSignUpPage inputRandomEmail() {
         emailElement.sendKeys(randomEmail);
         System.out.println("Email is written: " + randomEmail);
+        return this;
     }
 
     // enter random first name
-    public void inputRandomFirstName() {
+    public PartnersSignUpPage inputRandomFirstName() {
         firstNameElement.sendKeys(randomFirstName);
         System.out.println("First name is written: " + randomFirstName);
+        return this;
     }
 
     // enter random last name
-    public void inputRandomLastName() {
+    public PartnersSignUpPage inputRandomLastName() {
         lastNameElement.sendKeys(randomLastName);
         System.out.println("Last name is written: " + randomLastName);
+        return this;
     }
 
     // click on "Female" rondo button
-    public void clickFemaleRondoButon() {
+    public PartnersSignUpPage clickFemaleRondoButon() {
         femaleSexRadioButton.click();
         System.out.println("Sex:Female is chosen");
+        return this;
     }
 
     // enter password and confirmation
-    public void inputRandomPasswords() {
+    public PartnersSignUpPage inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
         System.out.println("Password & Confirmation are written");
+        return this;
     }
 
     // enter organization random name
-    public void inputRandomOrganizationName() {
+    public PartnersSignUpPage inputRandomOrganizationName() {
         organizationNameElement.sendKeys(randomOrganizationName);
         System.out.println("Organization name is written: " + randomOrganizationName);
+        return this;
     }
 
     // Select category "Programming"
-    public void selectProgrammingCategory() {
+    public PartnersSignUpPage selectProgrammingCategory() {
         Select select = new Select(categoryElement);
         select.selectByIndex(5);
         select.selectByVisibleText("Programming");
         System.out.println("'Programming' category is chosen");
+        return this;
     }
 
     //Type partners' occupation
-    public void enterPossition() {
+    public PartnersSignUpPage enterPossition() {
         positionInOrganizationElement.sendKeys("Manager");
         System.out.println("Position 'Manager' is written");
+        return this;
     }
 
     // Complete registration. Click Sign Up
@@ -100,5 +109,4 @@ public class PartnersSignUpPage {
         System.out.println("Sign Up button is clicked.");
         return new CongratsNgoPage(driver);
     }
-
 }

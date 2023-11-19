@@ -3,8 +3,9 @@ package ua.foxminded.skarb.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.PageFactory;
+import ua.foxminded.skarb.utils.BaseTest;
 
-public class CongratsNgoPage {
+public class CongratsNgoPage extends BaseTest {
     private WebDriver driver;
 
     public CongratsNgoPage(WebDriver driver) {
