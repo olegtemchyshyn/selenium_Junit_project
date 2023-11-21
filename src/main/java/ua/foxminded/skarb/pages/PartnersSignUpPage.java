@@ -45,61 +45,66 @@ public class PartnersSignUpPage extends BasePageObject {
     }
 
     // Enter random email
-    public PartnersSignUpPage inputRandomEmail() {
+    public void inputRandomEmail() {
         emailElement.sendKeys(randomEmail);
         System.out.println("Email is written: " + randomEmail);
-        return this;
     }
 
     // enter random first name
-    public PartnersSignUpPage inputRandomFirstName() {
+    public void inputRandomFirstName() {
         firstNameElement.sendKeys(randomFirstName);
         System.out.println("First name is written: " + randomFirstName);
-        return this;
     }
 
     // enter random last name
-    public PartnersSignUpPage inputRandomLastName() {
+    public void inputRandomLastName() {
         lastNameElement.sendKeys(randomLastName);
         System.out.println("Last name is written: " + randomLastName);
-        return this;
     }
 
     // click on "Female" rondo button
-    public PartnersSignUpPage clickFemaleRondoButon() {
+    public void clickFemaleRondoButon() {
         femaleSexRadioButton.click();
         System.out.println("Sex:Female is chosen");
-        return this;
     }
 
     // enter password and confirmation
-    public PartnersSignUpPage inputRandomPasswords() {
+    public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
         System.out.println("Password & Confirmation are written");
-        return this;
     }
 
     // enter organization random name
-    public PartnersSignUpPage inputRandomOrganizationName() {
+    public void inputRandomOrganizationName() {
         organizationNameElement.sendKeys(randomOrganizationName);
         System.out.println("Organization name is written: " + randomOrganizationName);
-        return this;
     }
 
     // Select category "Programming"
-    public PartnersSignUpPage selectProgrammingCategory() {
+    public void selectProgrammingCategory() {
         Select select = new Select(categoryElement);
         select.selectByIndex(5);
         select.selectByVisibleText("Programming");
         System.out.println("'Programming' category is chosen");
-        return this;
     }
 
     //Type partners' occupation
-    public PartnersSignUpPage enterPossition() {
+    public void enterPossition() {
         positionInOrganizationElement.sendKeys("Manager");
         System.out.println("Position 'Manager' is written");
+    }
+
+    //fill application with one method
+    public PartnersSignUpPage fillRegistrationForm() {
+        inputRandomEmail();
+        inputRandomFirstName();
+        inputRandomLastName();
+        clickFemaleRondoButon();
+        inputRandomPasswords();
+        inputRandomOrganizationName();
+        selectProgrammingCategory();
+        enterPossition();
         return this;
     }
 

@@ -22,15 +22,10 @@ public class PartnerRegistrationTest extends BaseTest {
 
         new HomePage(driver)
                 .clickPlusButton()
-                .clickPartnerButton()
-                .inputRandomEmail()
-                .inputRandomFirstName()
-                .inputRandomLastName()
-                .clickFemaleRondoButon()
-                .inputRandomPasswords()
-                .inputRandomOrganizationName()
-                .selectProgrammingCategory()
-                .enterPossition()
+                .clickPartnerButton();
+
+        new PartnersSignUpPage(driver)
+                .fillRegistrationForm()
                 .clickSignUpButton();
 
         // Verification
