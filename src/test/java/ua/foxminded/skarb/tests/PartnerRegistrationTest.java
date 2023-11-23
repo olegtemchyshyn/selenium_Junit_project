@@ -7,18 +7,16 @@ import org.openqa.selenium.WebElement;
 import ua.foxminded.skarb.pages.*;
 import ua.foxminded.skarb.utils.BaseTest;
 
-import java.time.Duration;
-
 public class PartnerRegistrationTest extends BaseTest {
     @Test
     public void registerPartner() {
-        System.out.println("Starting register a Partner");
+        log.info("Starting register a Partner");
 
         //Open Home page URL. Click Plus Button
         String homePageUrl = "https://skarb.foxminded.ua/";
         driver.get(homePageUrl);
         Assert.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), homePageUrl);
-        System.out.println("Page opened");
+        log.info("Page opened");
 
         new HomePage(driver)
                 .clickPlusButton()
@@ -45,7 +43,7 @@ public class PartnerRegistrationTest extends BaseTest {
         //Verification
         String pageSource = newConfirmationPage.getConfirmationMessage().getText();
         Assert.assertTrue("Email has not been confirmed", pageSource.contains("Your email confirmed!"));
-        System.out.println("Your email is confirmed. Congratulation!");
+        log.info("Your email is confirmed. Congratulation!");
     }
 
 }

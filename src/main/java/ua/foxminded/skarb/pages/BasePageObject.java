@@ -1,5 +1,7 @@
 package ua.foxminded.skarb.pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,10 +16,10 @@ import java.time.Duration;
 public class BasePageObject extends BaseTest {
 
     protected WebDriver driver;
-    protected WebDriverWait wait;
-
+    protected Logger log;
     public BasePageObject(WebDriver driver) {
         this.driver = driver;
+        this.log = LogManager.getLogger(BaseTest.class);
         PageFactory.initElements(driver, this);
     }
 
