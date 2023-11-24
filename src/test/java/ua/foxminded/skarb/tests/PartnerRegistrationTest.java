@@ -16,7 +16,7 @@ public class PartnerRegistrationTest extends BaseTest {
         String homePageUrl = "https://skarb.foxminded.ua/";
         driver.get(homePageUrl);
         Assert.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), homePageUrl);
-        log.info("Page opened");
+        log.info("Page was opened");
 
         new HomePage(driver)
                 .clickPlusButton()
@@ -24,6 +24,7 @@ public class PartnerRegistrationTest extends BaseTest {
 
         new PartnersSignUpPage(driver)
                 .fillRegistrationForm()
+                .inputPosition("Manager")
                 .clickSignUpButton();
 
         // Verification
@@ -43,7 +44,7 @@ public class PartnerRegistrationTest extends BaseTest {
         //Verification
         String pageSource = newConfirmationPage.getConfirmationMessage().getText();
         Assert.assertTrue("Email has not been confirmed", pageSource.contains("Your email confirmed!"));
-        log.info("Your email is confirmed. Congratulation!");
+        log.info("Your email was confirmed. Congratulation!");
     }
 
 }

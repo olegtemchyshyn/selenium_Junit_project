@@ -41,7 +41,7 @@ public class MailHogPage extends BaseTest {
 
     public void clickConfirmationLink() {
         confirmationLinkElement.click();
-        log.info("Confirmation link clicked");
+        log.info("Confirmation link was clicked");
     }
 }
 

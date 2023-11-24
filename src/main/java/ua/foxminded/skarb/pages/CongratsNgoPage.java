@@ -18,7 +18,7 @@ public class CongratsNgoPage extends BaseTest {
         String initHandle = driver.getWindowHandle();
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://skarbmail.foxminded.ua/");
-        log.info("Mail tab is open");
+        log.info("Mail tab was open");
         return new MailHogPage(driver);
     }
 

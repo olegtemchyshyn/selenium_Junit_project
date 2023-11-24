@@ -46,38 +46,38 @@ public class PartnersSignUpPage extends BasePageObject {
     // Enter random email
     public void inputRandomEmail() {
         emailElement.sendKeys(randomEmail);
-        log.info("Email is written: " + randomEmail);
+        log.info("Email was written: " + randomEmail);
     }
 
     // enter random first name
     public void inputRandomFirstName() {
         firstNameElement.sendKeys(randomFirstName);
-        log.info("First name is written: " + randomFirstName);
+        log.info("First name was written: " + randomFirstName);
     }
 
     // enter random last name
     public void inputRandomLastName() {
         lastNameElement.sendKeys(randomLastName);
-        log.info("Last name is written: " + randomLastName);
+        log.info("Last name was written: " + randomLastName);
     }
 
     // click on "Female" rondo button
     public void clickFemaleRondoButon() {
         femaleSexRadioButton.click();
-        log.info("Sex:Female is chosen");
+        log.info("Sex:Female was chosen");
     }
 
     // enter password and confirmation
     public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
-        log.info("Password & Confirmation are written");
+        log.info("Password & Confirmation were written");
     }
 
     // enter organization random name
     public void inputRandomOrganizationName() {
         organizationNameElement.sendKeys(randomOrganizationName);
-        log.info("Organization name is written: " + randomOrganizationName);
+        log.info("Organization name was written: " + randomOrganizationName);
     }
 
     // Select category "Programming"
@@ -85,13 +85,14 @@ public class PartnersSignUpPage extends BasePageObject {
         Select select = new Select(categoryElement);
         select.selectByIndex(5);
         select.selectByVisibleText("Programming");
-        log.info("'Programming' category is chosen");
+        log.info("'Programming' category was chosen");
     }
 
     //Type partners' occupation
-    public void enterPossition() {
-        positionInOrganizationElement.sendKeys("Manager");
-        log.info("Position 'Manager' is written");
+    public PartnersSignUpPage inputPosition(String position) {
+        positionInOrganizationElement.sendKeys(position);
+        log.info("Position: " + position + " was written");
+        return this;
     }
 
     //fill application with one method
@@ -103,14 +104,13 @@ public class PartnersSignUpPage extends BasePageObject {
         inputRandomPasswords();
         inputRandomOrganizationName();
         selectProgrammingCategory();
-        enterPossition();
         return this;
     }
 
     // Complete registration. Click Sign Up
     public CongratsNgoPage clickSignUpButton() {
         signUpButton.click();
-        log.info("Sign Up button is clicked.");
+        log.info("Sign Up button was clicked.");
         return new CongratsNgoPage(driver);
     }
 }

@@ -38,26 +38,26 @@ public class VolunteersSignUpPage extends BasePageObject {
 
     public void inputRandomEmailmail() {
         emailElement.sendKeys(randomEmail);
-        log.info("Email is written: " + randomEmail);
+        log.info("Email was written: " + randomEmail);
     }
 
     // enter random first name
     public void inputRandomFirstName() {
         firstNameElement.sendKeys(randomFirstName);
-        log.info("First name is written: " + randomFirstName);
+        log.info("First name was written: " + randomFirstName);
     }
 
     // enter random last name
     public void inputRandomLastName() {
         lastNameElement.sendKeys(randomLastName);
-        log.info("Last name is written: " + randomLastName);
+        log.info("Last name was written: " + randomLastName);
     }
 
     // enter password and confirmation
     public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
-        log.info("Password & Confirmation are written");
+        log.info("Password & Confirmation were written");
     }
 
     // Select category "Programming"
@@ -65,13 +65,13 @@ public class VolunteersSignUpPage extends BasePageObject {
         Select select = new Select(categoryElement);
         select.selectByIndex(4);
         select.selectByVisibleText("Programming");
-        log.info("'Programming' category is chosen");
+        log.info("'Programming' category was chosen");
     }
 
     // Complete registration. Click Sign Up
     public CongratsNgoPage clickSignUpButton() {
         signUpButton.click();
-        log.info("Sign Up button is clicked.");
+        log.info("Sign Up button was clicked.");
         return new CongratsNgoPage(driver);
     }
 }

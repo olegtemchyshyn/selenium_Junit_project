@@ -20,7 +20,7 @@ public class VolunteerRegistrationTest extends BaseTest {
         driver.get(url);
         //Assertion to check if the current URL is open
         Assert.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), url);
-        log.info("Volunteer page is open");
+        log.info("Volunteer page was open");
 
         //Complete the fields on the registration form.
         VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage(driver);
