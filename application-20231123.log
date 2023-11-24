@@ -1,5 +1,0 @@
-2023-11-23 13:44:03.284 [main] DEBUG ua.foxminded.skarb.utils.BaseTest - We've just greeted the user!
-2023-11-23 13:44:03.286 [main] INFO  ua.foxminded.skarb.utils.BaseTest - We've just greeted the user!
-2023-11-23 13:44:03.286 [main] WARN  ua.foxminded.skarb.utils.BaseTest - We've just greeted the user!
-2023-11-23 13:44:03.286 [main] ERROR ua.foxminded.skarb.utils.BaseTest - We've just greeted the user!
-2023-11-23 13:44:03.286 [main] FATAL ua.foxminded.skarb.utils.BaseTest - We've just greeted the user!
