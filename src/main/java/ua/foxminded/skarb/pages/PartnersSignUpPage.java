@@ -8,10 +8,10 @@ import org.openqa.selenium.support.ui.Select;
 
 import static ua.foxminded.skarb.utils.DataGenerator.*;
 
-public class PartnersSignUpPage {
+public class PartnersSignUpPage extends BasePageObject {
     private WebDriver driver;
 
-    @FindBy (xpath = "//button[@name='submit']")
+    @FindBy(xpath = "//button[@name='submit']")
     private WebElement signUpButton;
     @FindBy(id = "email")
     private WebElement emailElement;
@@ -39,6 +39,7 @@ public class PartnersSignUpPage {
     String randomOrganizationName = companyNameGenerator(4);
 
     public PartnersSignUpPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -94,11 +95,23 @@ public class PartnersSignUpPage {
         System.out.println("Position 'Manager' is written");
     }
 
+    //fill application with one method
+    public PartnersSignUpPage fillRegistrationForm() {
+        inputRandomEmail();
+        inputRandomFirstName();
+        inputRandomLastName();
+        clickFemaleRondoButon();
+        inputRandomPasswords();
+        inputRandomOrganizationName();
+        selectProgrammingCategory();
+        enterPossition();
+        return this;
+    }
+
     // Complete registration. Click Sign Up
     public CongratsNgoPage clickSignUpButton() {
         signUpButton.click();
         System.out.println("Sign Up button is clicked.");
         return new CongratsNgoPage(driver);
     }
-
 }

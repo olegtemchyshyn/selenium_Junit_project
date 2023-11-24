@@ -6,10 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-import java.util.Iterator;
-import java.util.Set;
-
 public class BaseTest extends TestUtilities {
 
     protected WebDriver driver;
@@ -26,16 +22,6 @@ public class BaseTest extends TestUtilities {
     public void tearDown() {
         System.out.println("Close driver");
         driver.quit();
-    }
-
-    //Get title of current page
-    public String getCurrentPageTitle() {
-        return driver.getTitle();
-    }
-
-    //Get source of current page
-    public String getCurrentPageSource() {
-        return driver.getPageSource();
     }
 
 }

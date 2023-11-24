@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import static ua.foxminded.skarb.utils.DataGenerator.*;
 
-public class VolunteersSignUpPage {
+public class VolunteersSignUpPage extends BasePageObject {
     private WebDriver driver;
 
     @FindBy(id = "email")
@@ -32,6 +32,7 @@ public class VolunteersSignUpPage {
     String randomPassword = generatePassword();
 
     public VolunteersSignUpPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
