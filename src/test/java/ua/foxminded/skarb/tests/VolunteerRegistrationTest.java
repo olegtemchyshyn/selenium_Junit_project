@@ -1,11 +1,9 @@
 package ua.foxminded.skarb.tests;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import ua.foxminded.skarb.pages.VolunteersSignUpPage;
 import ua.foxminded.skarb.utils.BaseTest;
 
@@ -15,14 +13,14 @@ public class VolunteerRegistrationTest extends BaseTest {
 
     @Test
     public void registerVolunteer() {
-        System.out.println("Starting register a Volunteer");
+        log.info("Starting register a Volunteer");
 
         //open URL
         String url = "https://skarb.foxminded.ua/registration/volunteers";
         driver.get(url);
         //Assertion to check if the current URL is open
         Assert.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), url);
-        System.out.println("Volunteer page is open");
+        log.info("Volunteer page was open");
 
         //Complete the fields on the registration form.
         VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage(driver);

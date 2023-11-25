@@ -40,45 +40,44 @@ public class PartnersSignUpPage extends BasePageObject {
 
     public PartnersSignUpPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     // Enter random email
     public void inputRandomEmail() {
         emailElement.sendKeys(randomEmail);
-        System.out.println("Email is written: " + randomEmail);
+        log.info("Email was written: " + randomEmail);
     }
 
     // enter random first name
     public void inputRandomFirstName() {
         firstNameElement.sendKeys(randomFirstName);
-        System.out.println("First name is written: " + randomFirstName);
+        log.info("First name was written: " + randomFirstName);
     }
 
     // enter random last name
     public void inputRandomLastName() {
         lastNameElement.sendKeys(randomLastName);
-        System.out.println("Last name is written: " + randomLastName);
+        log.info("Last name was written: " + randomLastName);
     }
 
     // click on "Female" rondo button
     public void clickFemaleRondoButon() {
         femaleSexRadioButton.click();
-        System.out.println("Sex:Female is chosen");
+        log.info("Sex:Female was chosen.");
     }
 
     // enter password and confirmation
     public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
-        System.out.println("Password & Confirmation are written");
+        log.info("Password & Confirmation were written.");
     }
 
     // enter organization random name
     public void inputRandomOrganizationName() {
         organizationNameElement.sendKeys(randomOrganizationName);
-        System.out.println("Organization name is written: " + randomOrganizationName);
+        log.info("Organization name was written: " + randomOrganizationName);
     }
 
     // Select category "Programming"
@@ -86,13 +85,14 @@ public class PartnersSignUpPage extends BasePageObject {
         Select select = new Select(categoryElement);
         select.selectByIndex(5);
         select.selectByVisibleText("Programming");
-        System.out.println("'Programming' category is chosen");
+        log.info("'Programming' category was chosen.");
     }
 
     //Type partners' occupation
-    public void enterPossition() {
-        positionInOrganizationElement.sendKeys("Manager");
-        System.out.println("Position 'Manager' is written");
+    public PartnersSignUpPage inputPosition(String position) {
+        positionInOrganizationElement.sendKeys(position);
+        log.info("Position: " + position + " was written.");
+        return this;
     }
 
     //fill application with one method
@@ -104,14 +104,13 @@ public class PartnersSignUpPage extends BasePageObject {
         inputRandomPasswords();
         inputRandomOrganizationName();
         selectProgrammingCategory();
-        enterPossition();
         return this;
     }
 
     // Complete registration. Click Sign Up
     public CongratsNgoPage clickSignUpButton() {
         signUpButton.click();
-        System.out.println("Sign Up button is clicked.");
+        log.info("Sign Up button was clicked");
         return new CongratsNgoPage(driver);
     }
 }

@@ -6,9 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ua.foxminded.skarb.utils.BaseTest;
+import java.util.logging.Logger;
 
 public class MailHogPage extends BaseTest {
     private WebDriver driver;
+    private Logger log;
 
     @FindBy(xpath = "//div[@id='content']//h3[@class='display-3 text-center']")
     private WebElement emailConfirmationContentElement;
@@ -34,12 +36,12 @@ public class MailHogPage extends BaseTest {
         }
         // Email message is visible, click on it
         recentEmailMessageElement.click();
-        System.out.println("Driver found registration confirmation email");
+        log.info("Driver found registration confirmation email");
     }
 
     public void clickConfirmationLink() {
         confirmationLinkElement.click();
-        System.out.println("Confirmation link clicked");
+        log.info("Confirmation link was clicked");
     }
 }
 
