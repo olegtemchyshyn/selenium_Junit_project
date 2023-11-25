@@ -26,6 +26,7 @@ public class PartnerRegistrationTest extends BaseTest {
                 .fillRegistrationForm()
                 .inputPosition("Manager")
                 .clickSignUpButton();
+        log.info("Partners registration form was filled in");
 
         // Verification
         WebElement successContent = driver.findElement(By.id("content"));

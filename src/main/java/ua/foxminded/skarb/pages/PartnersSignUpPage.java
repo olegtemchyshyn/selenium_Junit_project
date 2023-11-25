@@ -64,14 +64,14 @@ public class PartnersSignUpPage extends BasePageObject {
     // click on "Female" rondo button
     public void clickFemaleRondoButon() {
         femaleSexRadioButton.click();
-        log.info("Sex:Female was chosen");
+        log.info("Sex:Female was chosen.");
     }
 
     // enter password and confirmation
     public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
-        log.info("Password & Confirmation were written");
+        log.info("Password & Confirmation were written.");
     }
 
     // enter organization random name
@@ -85,13 +85,13 @@ public class PartnersSignUpPage extends BasePageObject {
         Select select = new Select(categoryElement);
         select.selectByIndex(5);
         select.selectByVisibleText("Programming");
-        log.info("'Programming' category was chosen");
+        log.info("'Programming' category was chosen.");
     }
 
     //Type partners' occupation
     public PartnersSignUpPage inputPosition(String position) {
         positionInOrganizationElement.sendKeys(position);
-        log.info("Position: " + position + " was written");
+        log.info("Position: " + position + " was written.");
         return this;
     }
 
@@ -110,7 +110,7 @@ public class PartnersSignUpPage extends BasePageObject {
     // Complete registration. Click Sign Up
     public CongratsNgoPage clickSignUpButton() {
         signUpButton.click();
-        log.info("Sign Up button was clicked.");
+        log.info("Sign Up button was clicked");
         return new CongratsNgoPage(driver);
     }
 }
