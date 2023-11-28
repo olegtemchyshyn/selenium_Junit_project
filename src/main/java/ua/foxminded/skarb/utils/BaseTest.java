@@ -10,8 +10,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BaseTest extends TestUtilities {
 
     protected WebDriver driver;
+    protected Logger log;
 
-    public static final Logger log = LogManager.getLogger(BaseTest.class);
+    public BaseTest() {
+        this.log = LogManager.getLogger(this.getClass());
+    }
 
     @BeforeEach
     public void setUp() {

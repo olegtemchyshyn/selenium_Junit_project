@@ -5,6 +5,8 @@ import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.PageFactory;
 import ua.foxminded.skarb.utils.BaseTest;
 
+import java.util.logging.Logger;
+
 public class CongratsNgoPage extends BaseTest {
     private WebDriver driver;
 

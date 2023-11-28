@@ -1,7 +1,8 @@
-package ua.foxminded.skarb.tests;
+package parameterizedTests;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ua.foxminded.skarb.pages.VolunteersSignUpPage;
@@ -9,10 +10,14 @@ import ua.foxminded.skarb.utils.BaseTest;
 
 import java.time.Duration;
 
-public class VolunteerRegistrationTest extends BaseTest {
-
-    @Test
-    public void registerVolunteer() {
+public class VolunteerRegistrationParameterizedTest extends BaseTest {
+    @ParameterizedTest
+    @CsvSource({
+            "John, Doe, johndoe@example.com, PaSsword123!",
+            "Jane, Smith, janesmith@example.com, PassWord123!",
+            "Walter, Happy, walterhappy@example.com, PassWord123!"
+    })
+    public void registerVolunteer(String firstName, String lastName, String email, String password) {
         log.info("Starting register a Volunteer");
 
         //open URL
@@ -24,10 +29,10 @@ public class VolunteerRegistrationTest extends BaseTest {
 
         //Complete the fields on the registration form.
         VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage(driver);
-        volunteersSignUpPage.inputRandomFirstName();
-        volunteersSignUpPage.inputRandomLastName();
-        volunteersSignUpPage.inputRandomEmail();
-        volunteersSignUpPage.inputRandomPasswords();
+        volunteersSignUpPage.inputFirstName(firstName);
+        volunteersSignUpPage.inputLastName(lastName);
+        volunteersSignUpPage.inputEmail(email);
+        volunteersSignUpPage.inputPasswords(password);
         volunteersSignUpPage.selectProgrammingCategory();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
         volunteersSignUpPage.clickSignUpButton();
