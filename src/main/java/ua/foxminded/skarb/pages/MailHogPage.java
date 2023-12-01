@@ -6,11 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ua.foxminded.skarb.utils.BaseTest;
-import java.util.logging.Logger;
 
 public class MailHogPage extends BaseTest {
+
     private WebDriver driver;
-    private Logger log;
 
     @FindBy(xpath = "//div[@id='content']//h3[@class='display-3 text-center']")
     private WebElement emailConfirmationContentElement;
@@ -28,7 +27,7 @@ public class MailHogPage extends BaseTest {
     public void recentEmailMessage() {
         WebElement recentEmailMessageElement = null;
         while (recentEmailMessageElement == null) {
-            try {
+            try { sleep(2000);
                 recentEmailMessageElement = driver.findElement(By.xpath("//div[@class='msglist-message row ng-scope']//div[contains(text(),'a few seconds ago')]"));
             } catch (org.openqa.selenium.NoSuchElementException e) {
                 driver.navigate().refresh();

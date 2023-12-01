@@ -5,47 +5,44 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import ua.foxminded.skarb.utils.BaseTest;
 
 import static ua.foxminded.skarb.utils.DataGenerator.*;
 
-public class PartnersSignUpPage extends BasePageObject {
-    private WebDriver driver;
+public class NgoSignUpPage extends BasePageObject {
 
-    @FindBy(xpath = "//button[@name='submit']")
-    private WebElement signUpButton;
     @FindBy(id = "email")
     private WebElement emailElement;
     @FindBy(id = "firstName")
     private WebElement firstNameElement;
     @FindBy(id = "lastName")
     private WebElement lastNameElement;
-    @FindBy(id = "female")
-    private WebElement femaleSexRadioButton;
     @FindBy(id = "password")
     private WebElement passwordElement;
     @FindBy(id = "confirmPassword")
     private WebElement confirmPasswordElement;
+    @FindBy(id = "categoryIds")
+    private WebElement categoryElement;
+    @FindBy(xpath = "//button[@name='submit']")
+    private WebElement signUpButton;
+    @FindBy(id = "male")
+    private WebElement maleSexRadioButton;
     @FindBy(id = "organizationName")
     private WebElement organizationNameElement;
-    @FindBy(xpath = "//select[@id='categoryIds']")
-    private WebElement categoryElement;
     @FindBy(id = "positionInOrganization")
     private WebElement positionInOrganizationElement;
-    String randomFirstName = dataGenerator(6);
-    String randomLastName = dataGenerator(7);
-    String domain = domainCorporate();
-    String randomEmail = randomFirstName + "." + randomLastName + domain;
-    String randomPassword = generatePassword();
-    String randomOrganizationName = companyNameGenerator(4);
+    static String randomFirstName = dataGenerator(5);
+    static String randomLastName = dataGenerator(5);
+    static String domain = domainExample();
+    static String randomEmail = randomFirstName + "." + randomLastName + domain;
+    static String randomPassword = generatePassword();
+    String randomOrganizationName = companyNameGenerator(6);
 
-    public PartnersSignUpPage(WebDriver driver) {
+    public NgoSignUpPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    // Enter random email
-    public void inputRandomEmail() {
+    public void inputRandomEmailmail() {
         emailElement.sendKeys(randomEmail);
         log.info("Email was written: " + randomEmail);
     }
@@ -63,16 +60,16 @@ public class PartnersSignUpPage extends BasePageObject {
     }
 
     // click on "Female" rondo button
-    public void clickFemaleRondoButon() {
-        femaleSexRadioButton.click();
-        log.info("Sex:Female was chosen.");
+    public void clickMaleRondoButon() {
+        maleSexRadioButton.click();
+        log.info("Sex:Male was chosen.");
     }
 
     // enter password and confirmation
     public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
-        log.info("Password & Confirmation were written.");
+        log.info("Password & Confirmation were written");
     }
 
     // enter organization random name
@@ -81,37 +78,25 @@ public class PartnersSignUpPage extends BasePageObject {
         log.info("Organization name was written: " + randomOrganizationName);
     }
 
-    // Select category "Programming"
-    public void selectProgrammingCategory() {
-        Select select = new Select(categoryElement);
-        select.selectByIndex(5);
-        select.selectByVisibleText("Programming");
-        log.info("'Programming' category was chosen.");
-    }
-
     //Type partners' occupation
-    public PartnersSignUpPage inputPosition(String position) {
+    public NgoSignUpPage inputPosition(String position) {
         positionInOrganizationElement.sendKeys(position);
         log.info("Position: " + position + " was written.");
         return this;
     }
 
-    //fill application with one method
-    public PartnersSignUpPage fillRegistrationForm() {
-        inputRandomEmail();
-        inputRandomFirstName();
-        inputRandomLastName();
-        clickFemaleRondoButon();
-        inputRandomPasswords();
-        inputRandomOrganizationName();
-        selectProgrammingCategory();
-        return this;
+    // Select category "Programming"
+    public void selectProgrammingCategory() {
+        Select select = new Select(categoryElement);
+        select.selectByIndex(5);
+        select.selectByVisibleText("Programming");
+        log.info("'Programming' category was chosen");
     }
 
     // Complete registration. Click Sign Up
     public CongratsNgoPage clickSignUpButton() {
         signUpButton.click();
-        log.info("Sign Up button was clicked");
+        log.info("Sign Up button was clicked.");
         return new CongratsNgoPage(driver);
     }
 }

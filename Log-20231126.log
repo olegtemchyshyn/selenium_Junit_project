@@ -1,0 +1,173 @@
+2023-11-26 17:35:17.523 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a NGO
+2023-11-26 17:37:30.607 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a NGO
+2023-11-26 17:37:54.126 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a Volunteer
+2023-11-26 17:44:01.982 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 17:44:02.455 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a Partner
+2023-11-26 17:44:03.995 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Page was opened
+2023-11-26 17:44:05.235 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Qxvjl.Affxze@skarb.ngo
+2023-11-26 17:44:05.267 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Qxvjl
+2023-11-26 17:44:05.297 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Affxze
+2023-11-26 17:44:05.324 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Female was chosen.
+2023-11-26 17:44:05.387 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written.
+2023-11-26 17:44:05.418 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: CLFR
+2023-11-26 17:44:05.567 [main] INFO  ua.foxminded.skarb.utils.BaseTest - 'Programming' category was chosen.
+2023-11-26 17:44:05.599 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Position: Manager was written.
+2023-11-26 17:44:06.388 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sign Up button was clicked
+2023-11-26 17:44:06.390 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Partners registration form was filled in
+2023-11-26 17:44:06.422 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 17:48:46.365 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a Volunteer
+2023-11-26 17:51:45.189 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 17:51:45.658 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a Partner
+2023-11-26 17:51:47.501 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Page was opened
+2023-11-26 17:51:48.909 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Csgek.Icdwqt@skarb.ngo
+2023-11-26 17:51:48.941 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Csgek
+2023-11-26 17:51:48.970 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Icdwqt
+2023-11-26 17:51:48.998 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Female was chosen.
+2023-11-26 17:51:49.060 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written.
+2023-11-26 17:51:49.092 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: DVDL
+2023-11-26 17:51:49.242 [main] INFO  ua.foxminded.skarb.utils.BaseTest - 'Programming' category was chosen.
+2023-11-26 17:51:49.274 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Position: Manager was written.
+2023-11-26 17:51:50.086 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sign Up button was clicked
+2023-11-26 17:51:50.087 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Partners registration form was filled in
+2023-11-26 17:51:55.369 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 17:52:58.624 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 17:52:59.100 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a Partner
+2023-11-26 17:53:00.899 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Page was opened
+2023-11-26 17:53:02.296 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Hhelq.Uzfzxm@skarb.ngo
+2023-11-26 17:53:02.327 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Hhelq
+2023-11-26 17:53:02.357 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Uzfzxm
+2023-11-26 17:53:02.384 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Female was chosen.
+2023-11-26 17:53:02.448 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written.
+2023-11-26 17:53:02.484 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: IUWR
+2023-11-26 17:53:02.631 [main] INFO  ua.foxminded.skarb.utils.BaseTest - 'Programming' category was chosen.
+2023-11-26 17:53:02.662 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Position: Manager was written.
+2023-11-26 17:53:03.498 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sign Up button was clicked
+2023-11-26 17:53:03.499 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Partners registration form was filled in
+2023-11-26 17:53:06.492 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 17:58:05.349 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 17:58:05.814 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a Partner
+2023-11-26 17:58:07.701 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Page was opened
+2023-11-26 17:58:08.955 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Dxffd.Nycvqj@skarb.ngo
+2023-11-26 17:58:08.987 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Dxffd
+2023-11-26 17:58:09.018 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Nycvqj
+2023-11-26 17:58:09.045 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Female was chosen.
+2023-11-26 17:58:09.107 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written.
+2023-11-26 17:58:09.139 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: SPUR
+2023-11-26 17:58:09.298 [main] INFO  ua.foxminded.skarb.utils.BaseTest - 'Programming' category was chosen.
+2023-11-26 17:58:09.332 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Position: Manager was written.
+2023-11-26 17:58:10.187 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sign Up button was clicked
+2023-11-26 17:58:10.188 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Partners registration form was filled in
+2023-11-26 17:58:20.862 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 18:03:38.793 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a NGO
+2023-11-26 18:05:20.833 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a Volunteer
+2023-11-26 18:06:14.816 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 18:06:15.286 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a NGO
+2023-11-26 18:06:16.813 [main] INFO  ua.foxminded.skarb.utils.BaseTest - NGO page was open
+2023-11-26 18:06:16.922 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Yxt.Ckbf@example.com
+2023-11-26 18:06:16.951 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Yxt
+2023-11-26 18:06:16.980 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Ckbf
+2023-11-26 18:06:17.009 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Male was chosen.
+2023-11-26 18:06:17.072 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written
+2023-11-26 18:06:17.105 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: BPOWTZ
+2023-11-26 18:06:17.117 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 18:09:50.985 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 18:09:51.455 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a NGO
+2023-11-26 18:09:52.938 [main] INFO  ua.foxminded.skarb.utils.BaseTest - NGO page was open
+2023-11-26 18:09:53.064 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Tld.Pvxd@example.com
+2023-11-26 18:09:53.095 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Tld
+2023-11-26 18:09:53.126 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Pvxd
+2023-11-26 18:09:53.157 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Male was chosen.
+2023-11-26 18:09:53.222 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written
+2023-11-26 18:09:53.256 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: XFWSWK
+2023-11-26 18:09:53.268 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 18:18:23.975 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 18:18:24.443 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a NGO
+2023-11-26 18:18:25.993 [main] INFO  ua.foxminded.skarb.utils.BaseTest - NGO page was open
+2023-11-26 18:18:26.084 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Pzy.Edqr@example.com
+2023-11-26 18:18:26.111 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Pzy
+2023-11-26 18:18:26.138 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Edqr
+2023-11-26 18:18:26.162 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Male was chosen.
+2023-11-26 18:18:26.222 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written
+2023-11-26 18:18:26.254 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: XXIPVM
+2023-11-26 18:18:26.397 [main] INFO  ua.foxminded.skarb.utils.BaseTest - 'Programming' category was chosen
+2023-11-26 18:18:26.425 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Position: Manager was written.
+2023-11-26 18:18:27.483 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sign Up button was clicked.
+2023-11-26 18:18:27.485 [main] INFO  ua.foxminded.skarb.utils.BaseTest - NGO registration form was filled in
+2023-11-26 18:18:35.655 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 18:22:10.545 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 18:22:11.020 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a NGO
+2023-11-26 18:22:12.586 [main] INFO  ua.foxminded.skarb.utils.BaseTest - NGO page was open
+2023-11-26 18:22:12.678 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Xwz.Nxcp@example.com
+2023-11-26 18:22:12.707 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Xwz
+2023-11-26 18:22:12.738 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Nxcp
+2023-11-26 18:22:12.766 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Male was chosen.
+2023-11-26 18:22:12.829 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written
+2023-11-26 18:22:12.861 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: QHZPSL
+2023-11-26 18:22:13.011 [main] INFO  ua.foxminded.skarb.utils.BaseTest - 'Programming' category was chosen
+2023-11-26 18:22:13.043 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Position: Manager was written.
+2023-11-26 18:22:14.005 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sign Up button was clicked.
+2023-11-26 18:22:14.006 [main] INFO  ua.foxminded.skarb.utils.BaseTest - NGO registration form was filled in
+2023-11-26 18:22:22.156 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 18:27:09.987 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Create driver: Chrome
+2023-11-26 18:27:10.452 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Starting register a NGO
+2023-11-26 18:27:11.983 [main] INFO  ua.foxminded.skarb.utils.BaseTest - NGO page was open
+2023-11-26 18:27:12.121 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Email was written: Rel.Nbah@example.com
+2023-11-26 18:27:12.153 [main] INFO  ua.foxminded.skarb.utils.BaseTest - First name was written: Rel
+2023-11-26 18:27:12.184 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Last name was written: Nbah
+2023-11-26 18:27:12.213 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sex:Male was chosen.
+2023-11-26 18:27:12.276 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Password & Confirmation were written
+2023-11-26 18:27:12.306 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Organization name was written: SIUZMY
+2023-11-26 18:27:12.450 [main] INFO  ua.foxminded.skarb.utils.BaseTest - 'Programming' category was chosen
+2023-11-26 18:27:12.481 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Position: Manager was written.
+2023-11-26 18:27:13.433 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Sign Up button was clicked.
+2023-11-26 18:27:13.434 [main] INFO  ua.foxminded.skarb.utils.BaseTest - NGO registration form was filled in
+2023-11-26 18:27:16.213 [main] INFO  ua.foxminded.skarb.utils.BaseTest - Close driver
+2023-11-26 19:16:40.030 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Create driver: Chrome
+2023-11-26 19:16:40.501 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Starting register a NGO
+2023-11-26 19:16:42.035 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO page was open
+2023-11-26 19:16:42.139 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Email was written: Jaj.Bbuf@example.com
+2023-11-26 19:16:42.169 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - First name was written: Jaj
+2023-11-26 19:16:42.196 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Last name was written: Bbuf
+2023-11-26 19:16:42.224 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Sex:Male was chosen.
+2023-11-26 19:16:42.286 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Password & Confirmation were written
+2023-11-26 19:16:42.318 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Organization name was written: GPFQGX
+2023-11-26 19:16:42.461 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - 'Programming' category was chosen
+2023-11-26 19:16:42.492 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Position: Manager was written.
+2023-11-26 19:16:43.442 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Sign Up button was clicked.
+2023-11-26 19:16:43.443 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO registration form was filled in
+2023-11-26 19:16:45.683 [main] INFO  ua.foxminded.skarb.pages.CongratsNgoPage - Mail tab was open
+2023-11-26 19:17:00.130 [main] INFO  ua.foxminded.skarb.pages.MailHogPage - Driver found registration confirmation email
+2023-11-26 19:17:00.206 [main] INFO  ua.foxminded.skarb.pages.MailHogPage - Confirmation link was clicked
+2023-11-26 19:17:00.213 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Close driver
+2023-11-26 19:19:18.672 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Create driver: Chrome
+2023-11-26 19:19:19.145 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Starting register a Partner
+2023-11-26 19:19:20.782 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Page was opened
+2023-11-26 19:19:22.019 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - Email was written: Xnqnp.Sfsmjr@skarb.ngo
+2023-11-26 19:19:22.051 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - First name was written: Xnqnp
+2023-11-26 19:19:22.081 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - Last name was written: Sfsmjr
+2023-11-26 19:19:22.107 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - Sex:Female was chosen.
+2023-11-26 19:19:22.169 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - Password & Confirmation were written.
+2023-11-26 19:19:22.201 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - Organization name was written: SHHQ
+2023-11-26 19:19:22.356 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - 'Programming' category was chosen.
+2023-11-26 19:19:22.388 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - Position: Manager was written.
+2023-11-26 19:19:23.152 [main] INFO  ua.foxminded.skarb.pages.PartnersSignUpPage - Sign Up button was clicked
+2023-11-26 19:19:23.153 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Partners registration form was filled in
+2023-11-26 19:19:25.445 [main] INFO  ua.foxminded.skarb.pages.CongratsNgoPage - Mail tab was open
+2023-11-26 19:22:24.813 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Close driver
+2023-11-26 19:25:43.309 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Create driver: Chrome
+2023-11-26 19:25:43.775 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Starting register a NGO
+2023-11-26 19:25:45.547 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO page was open
+2023-11-26 19:25:45.657 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Email was written: Rpk.Vktg@example.com
+2023-11-26 19:25:45.687 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - First name was written: Rpk
+2023-11-26 19:25:45.716 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Last name was written: Vktg
+2023-11-26 19:25:45.743 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Sex:Male was chosen.
+2023-11-26 19:25:45.807 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Password & Confirmation were written
+2023-11-26 19:25:45.840 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Organization name was written: RLQDTG
+2023-11-26 19:25:45.989 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - 'Programming' category was chosen
+2023-11-26 19:25:46.020 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Position: Manager was written.
+2023-11-26 19:25:46.974 [main] INFO  ua.foxminded.skarb.pages.NgoSignUpPage - Sign Up button was clicked.
+2023-11-26 19:25:46.976 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO registration form was filled in
+2023-11-26 19:25:49.315 [main] INFO  ua.foxminded.skarb.pages.CongratsNgoPage - Mail tab was open
+2023-11-26 19:26:01.662 [main] INFO  ua.foxminded.skarb.pages.MailHogPage - Driver found registration confirmation email
+2023-11-26 19:26:01.710 [main] INFO  ua.foxminded.skarb.pages.MailHogPage - Confirmation link was clicked
+2023-11-26 19:26:01.717 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Close driver

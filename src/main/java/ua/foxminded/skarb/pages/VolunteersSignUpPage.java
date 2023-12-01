@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import static ua.foxminded.skarb.utils.DataGenerator.*;
 
 public class VolunteersSignUpPage extends BasePageObject {
-    private WebDriver driver;
+    protected WebDriver driver;
 
     @FindBy(id = "email")
     private WebElement emailElement;
@@ -36,9 +36,15 @@ public class VolunteersSignUpPage extends BasePageObject {
         PageFactory.initElements(driver, this);
     }
 
-    public void inputRandomEmailmail() {
+    public void inputRandomEmail() {
         emailElement.sendKeys(randomEmail);
         log.info("Email was written: " + randomEmail);
+    }
+
+    public void inputEmail(String email) {
+        emailElement.clear();
+        emailElement.sendKeys(email);
+        log.info("Email was written: " + email);
     }
 
     // enter random first name
@@ -47,16 +53,37 @@ public class VolunteersSignUpPage extends BasePageObject {
         log.info("First name was written: " + randomFirstName);
     }
 
+    // enter first name
+    public void inputFirstName(String firstName) {
+        firstNameElement.clear();
+        firstNameElement.sendKeys(firstName);
+        log.info("First name was written: " + firstName);
+    }
+
     // enter random last name
     public void inputRandomLastName() {
         lastNameElement.sendKeys(randomLastName);
         log.info("Last name was written: " + randomLastName);
     }
 
-    // enter password and confirmation
+    // enter last name
+    public void inputLastName(String lastName) {
+        lastNameElement.clear();
+        lastNameElement.sendKeys(lastName);
+        log.info("Last name was written: " + lastName);
+    }
+
+    // enter random password and confirmation
     public void inputRandomPasswords() {
         passwordElement.sendKeys(randomPassword);
         confirmPasswordElement.sendKeys(randomPassword);
+        log.info("Password & Confirmation were written");
+    }
+
+    // enter password and confirmation
+    public void inputPasswords(String password) {
+        passwordElement.sendKeys(password);
+        confirmPasswordElement.sendKeys(password);
         log.info("Password & Confirmation were written");
     }
 
