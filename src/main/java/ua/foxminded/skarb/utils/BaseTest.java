@@ -12,12 +12,9 @@ public class BaseTest extends TestUtilities {
     protected WebDriver driver;
     protected Logger log;
 
-    public BaseTest() {
-        this.log = LogManager.getLogger(this.getClass());
-    }
-
     @BeforeEach
     public void setUp() {
+        log = LogManager.getLogger(getClass());
         driver = new ChromeDriver();
         log.info("Create driver: Chrome");
         driver.manage().window().maximize();
@@ -27,6 +24,14 @@ public class BaseTest extends TestUtilities {
     public void tearDown() {
         log.info("Close driver");
         driver.quit();
+    }
+
+    public void sleep(long m) {
+        try {
+            Thread.sleep(m);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

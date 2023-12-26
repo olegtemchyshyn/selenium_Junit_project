@@ -21,6 +21,13 @@ target/
 .springBeans
 .sts4-cache
 
+.setting
+all .DS_Store
+test-output
+.classpath
+.project
+.log
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/

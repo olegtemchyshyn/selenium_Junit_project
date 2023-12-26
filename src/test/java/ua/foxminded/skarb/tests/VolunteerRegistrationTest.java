@@ -23,7 +23,7 @@ public class VolunteerRegistrationTest extends BaseTest {
         log.info("Volunteer page was open");
 
         //Complete the fields on the registration form.
-        VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage(driver);
+        VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage(driver, log);
         volunteersSignUpPage.inputRandomFirstName();
         volunteersSignUpPage.inputRandomLastName();
         volunteersSignUpPage.inputRandomEmail();

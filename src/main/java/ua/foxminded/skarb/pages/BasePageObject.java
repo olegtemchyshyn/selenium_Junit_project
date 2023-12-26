@@ -1,6 +1,5 @@
 package ua.foxminded.skarb.pages;
 
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -12,12 +11,14 @@ import ua.foxminded.skarb.utils.BaseTest;
 
 import java.time.Duration;
 
-public class BasePageObject extends BaseTest {
+public class BasePageObject {
 
-    public BasePageObject(WebDriver driver) {
-        super();
+    protected WebDriver driver;
+    protected Logger log;
+
+    public BasePageObject(WebDriver driver, Logger log) {
         this.driver = driver;
-     //   this.log = LogManager.getLogger(BaseTest.class);
+        this.log = log;
         PageFactory.initElements(driver, this);
     }
 

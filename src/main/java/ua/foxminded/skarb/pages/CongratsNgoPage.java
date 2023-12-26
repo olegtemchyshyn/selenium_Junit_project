@@ -3,15 +3,11 @@ package ua.foxminded.skarb.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.PageFactory;
-import ua.foxminded.skarb.utils.BaseTest;
+import org.apache.logging.log4j.Logger;
+public class CongratsNgoPage extends BasePageObject {
 
-import java.util.logging.Logger;
-
-public class CongratsNgoPage extends BaseTest {
-    private WebDriver driver;
-
-    public CongratsNgoPage(WebDriver driver) {
-        this.driver = driver;
+    public CongratsNgoPage(WebDriver driver, Logger log) {
+        super(driver, log);
         PageFactory.initElements(driver, this);
     }
 
@@ -21,7 +17,7 @@ public class CongratsNgoPage extends BaseTest {
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://skarbmail.foxminded.ua/");
         log.info("Mail tab was open");
-        return new MailHogPage(driver);
+        return new MailHogPage(driver, log);
     }
 
 }

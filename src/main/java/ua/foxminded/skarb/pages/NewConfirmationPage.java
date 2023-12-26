@@ -14,9 +14,8 @@ public class NewConfirmationPage extends BasePageObject {
     @FindBy(xpath = "//div[@class='alert alert-success']//h3[@class='display-3 text-center']")
     private WebElement confirmationMessage;
 
-    public NewConfirmationPage(WebDriver driver) {
-        super(driver);
-      //  this.driver = driver;
+    public NewConfirmationPage(WebDriver driver, Logger log) {
+        super(driver, log);
         PageFactory.initElements(driver, this);
     }
 
@@ -41,6 +40,6 @@ public class NewConfirmationPage extends BasePageObject {
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://skarb.foxminded.ua/login");
         log.info("Log In tab was open");
-        return new LoginPage(driver);
+        return new LoginPage(driver, log);
     }
 }

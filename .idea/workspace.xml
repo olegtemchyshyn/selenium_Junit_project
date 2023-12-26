@@ -5,22 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="589b0c2c-132c-4d41-9861-46b498f9fa2a" name="Changes" comment="log.info message was modifyed, all over the project. src/main/page/PartnerSignUp.. inputPosition(String position) was added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/NgoSignUpPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/PrivatePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/parameterizedTests/NgoRegistrationParameterizedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/parameterizedTests/PartnerRegistrationParameterizedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/parameterizedTests/VolunteerRegistrationParameterizedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/NgoRegistrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log-20231126.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log-20231127.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/BasePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/BasePageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/CongratsNgoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/CongratsNgoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/MailHogPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/MailHogPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/NewConfirmationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/NewConfirmationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/NgoSignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/NgoSignUpPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/PartnersSignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/PartnersSignUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/PrivatePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/PrivatePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/VolunteersSignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/pages/VolunteersSignUpPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/utils/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/utils/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/LogInChromeBrowserTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/LogInFirefoxBrowserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/utils/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/utils/DataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/utils/TestUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/foxminded/skarb/utils/TestUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parameterizedTests/NgoRegistrationParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parameterizedTests/NgoRegistrationParameterizedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parameterizedTests/PartnerRegistrationParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parameterizedTests/PartnerRegistrationParameterizedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parameterizedTests/VolunteerRegistrationParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parameterizedTests/VolunteerRegistrationParameterizedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/NgoRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/NgoRegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/PartnerRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/PartnerRegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/VolunteerRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/foxminded/skarb/tests/VolunteerRegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,10 +82,10 @@
     &quot;java.suggest.annotation.dependency&quot;: &quot;false&quot;,
     &quot;last_directory_selection&quot;: &quot;/Users/nataliiatemchyshyn/Desktop/IT/Project/skarb-project-automation/target/generated-test-sources/test-annotations&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/Users/nataliiatemchyshyn/Desktop/IT/Project/skarb-project-automation/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.35412475&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.12531328&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -86,7 +94,22 @@
       <recent name="ua.foxminded.skarb.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PartnerRegistrationParameterizedTest.registerPartner">
+  <component name="RunManager" selected="JUnit.NgoRegistrationParameterizedTest">
+    <configuration name="NgoRegistrationParameterizedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skarb-project-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parameterizedTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parameterizedTests" />
+      <option name="MAIN_CLASS_NAME" value="parameterizedTests.NgoRegistrationParameterizedTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NgoRegistrationParameterizedTest.registerNgo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skarb-project-automation" />
       <extension name="coverage">
@@ -99,6 +122,21 @@
       <option name="MAIN_CLASS_NAME" value="parameterizedTests.NgoRegistrationParameterizedTest" />
       <option name="METHOD_NAME" value="registerNgo" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NgoRegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skarb-project-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.foxminded.skarb.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.foxminded.skarb.tests" />
+      <option name="MAIN_CLASS_NAME" value="ua.foxminded.skarb.tests.NgoRegistrationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,45 +173,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartnerRegistrationTest.registerPartner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skarb-project-automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ua.foxminded.skarb.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ua.foxminded.skarb.tests" />
-      <option name="MAIN_CLASS_NAME" value="ua.foxminded.skarb.tests.PartnerRegistrationTest" />
-      <option name="METHOD_NAME" value="registerPartner" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VolunteerRegistrationTest.registerVolunteer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skarb-project-automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ua.foxminded.skarb.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ua.foxminded.skarb.tests" />
-      <option name="MAIN_CLASS_NAME" value="ua.foxminded.skarb.tests.VolunteerRegistrationTest" />
-      <option name="METHOD_NAME" value="registerVolunteer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PartnerRegistrationParameterizedTest.registerPartner" />
+        <item itemvalue="JUnit.NgoRegistrationParameterizedTest" />
         <item itemvalue="JUnit.NgoRegistrationParameterizedTest.registerNgo" />
-        <item itemvalue="JUnit.VolunteerRegistrationTest.registerVolunteer" />
         <item itemvalue="JUnit.NgoRegistrationTest.registerNgo" />
-        <item itemvalue="JUnit.PartnerRegistrationTest.registerPartner" />
+        <item itemvalue="JUnit.NgoRegistrationTest" />
+        <item itemvalue="JUnit.PartnerRegistrationParameterizedTest.registerPartner" />
       </list>
     </recent_temporary>
   </component>
@@ -247,6 +253,16 @@
     <MESSAGE value="log.info message was modifyed, all over the project. src/main/page/PartnerSignUp.. inputPosition(String position) was added" />
     <option name="LAST_COMMIT_MESSAGE" value="log.info message was modifyed, all over the project. src/main/page/PartnerSignUp.. inputPosition(String position) was added" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

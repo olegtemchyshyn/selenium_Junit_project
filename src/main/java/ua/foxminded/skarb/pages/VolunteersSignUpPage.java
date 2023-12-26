@@ -1,5 +1,6 @@
 package ua.foxminded.skarb.pages;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,6 @@ import org.openqa.selenium.support.ui.Select;
 import static ua.foxminded.skarb.utils.DataGenerator.*;
 
 public class VolunteersSignUpPage extends BasePageObject {
-    protected WebDriver driver;
 
     @FindBy(id = "email")
     private WebElement emailElement;
@@ -31,8 +31,8 @@ public class VolunteersSignUpPage extends BasePageObject {
     String randomEmail = randomFirstName + "." + randomLastName + domain;
     String randomPassword = generatePassword();
 
-    public VolunteersSignUpPage(WebDriver driver) {
-        super(driver);
+    public VolunteersSignUpPage(WebDriver driver, Logger log) {
+        super(driver, log);
         PageFactory.initElements(driver, this);
     }
 
@@ -99,6 +99,6 @@ public class VolunteersSignUpPage extends BasePageObject {
     public CongratsNgoPage clickSignUpButton() {
         signUpButton.click();
         log.info("Sign Up button was clicked.");
-        return new CongratsNgoPage(driver);
+        return new CongratsNgoPage(driver, log);
     }
 }

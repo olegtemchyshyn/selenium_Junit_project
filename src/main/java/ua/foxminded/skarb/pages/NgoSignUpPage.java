@@ -1,14 +1,20 @@
 package ua.foxminded.skarb.pages;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
-import static ua.foxminded.skarb.utils.DataGenerator.*;
+import ua.foxminded.skarb.utils.DataGenerator;
 
 public class NgoSignUpPage extends BasePageObject {
+    private String randomFirstName;
+    private String randomLastName;
+    private String domain;
+    public String randomEmail;
+    public String randomPassword;
+    private String randomOrganizationName;
 
     @FindBy(id = "email")
     private WebElement emailElement;
@@ -30,16 +36,20 @@ public class NgoSignUpPage extends BasePageObject {
     private WebElement organizationNameElement;
     @FindBy(id = "positionInOrganization")
     private WebElement positionInOrganizationElement;
-    static String randomFirstName = dataGenerator(5);
-    static String randomLastName = dataGenerator(5);
-    static String domain = domainExample();
-    static String randomEmail = randomFirstName + "." + randomLastName + domain;
-    static String randomPassword = generatePassword();
-    String randomOrganizationName = companyNameGenerator(6);
 
-    public NgoSignUpPage(WebDriver driver) {
-        super(driver);
+    public NgoSignUpPage(WebDriver driver, Logger log) {
+        super(driver, log);
         PageFactory.initElements(driver, this);
+    }
+
+    public void generatedDataForRegestrationNgo() {
+        DataGenerator dataGenerator = new DataGenerator();
+        this.randomFirstName = dataGenerator.dataGenerator(5);
+        this.randomLastName = dataGenerator.dataGenerator(5);
+        this.domain = dataGenerator.domainExample();
+        this.randomEmail = this.randomFirstName + "." + this.randomLastName + this.domain;
+        this.randomPassword = dataGenerator.generatePassword();
+        this.randomOrganizationName = dataGenerator.companyNameGenerator(4);
     }
 
     public void inputRandomEmailmail() {
@@ -97,6 +107,6 @@ public class NgoSignUpPage extends BasePageObject {
     public CongratsNgoPage clickSignUpButton() {
         signUpButton.click();
         log.info("Sign Up button was clicked.");
-        return new CongratsNgoPage(driver);
+        return new CongratsNgoPage(driver, log);
     }
 }

@@ -22,7 +22,7 @@ public class NgoRegistrationTest extends BaseTest {
         Assert.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), ngoUrl);
         log.info("NGO page was open");
 
-        NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver);
+        NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log);
         ngoSignUpPage.inputRandomEmailmail();
         ngoSignUpPage.inputRandomFirstName();
         ngoSignUpPage.inputRandomLastName();
@@ -38,14 +38,14 @@ public class NgoRegistrationTest extends BaseTest {
         // Verification
         WebElement successContent = driver.findElement(By.id("content"));
         Assert.assertTrue("Success message is not present on the page", successContent.isDisplayed());
-        CongratsNgoPage congratsNgoPage = new CongratsNgoPage(driver);
+        CongratsNgoPage congratsNgoPage = new CongratsNgoPage(driver, log);
         congratsNgoPage.switchToMailHog();
 
         //Clicking on confirmation link. Congratulation message!
-        MailHogPage mailHogPage = new MailHogPage(driver);
+        MailHogPage mailHogPage = new MailHogPage(driver, log);
         mailHogPage.recentEmailMessage();
         mailHogPage.clickConfirmationLink();
-        NewConfirmationPage newConfirmationPage = new NewConfirmationPage(driver);
+        NewConfirmationPage newConfirmationPage = new NewConfirmationPage(driver, log);
         newConfirmationPage.switchToLastTab();
         newConfirmationPage.waitForConfirmationMessage();
 
@@ -56,7 +56,7 @@ public class NgoRegistrationTest extends BaseTest {
 
         newConfirmationPage.switchToLogin();
 
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage(driver, log);
         loginPage.typeLogin();
         loginPage.typePassword();
         loginPage.clickEnterButton();

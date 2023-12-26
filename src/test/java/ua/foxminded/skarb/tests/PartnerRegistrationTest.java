@@ -18,11 +18,11 @@ public class PartnerRegistrationTest extends BaseTest {
         Assert.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), homePageUrl);
         log.info("Page was opened");
 
-        new HomePage(driver)
+        new HomePage(driver, log)
                 .clickPlusButton()
                 .clickPartnerButton();
 
-        new PartnersSignUpPage(driver)
+        new PartnersSignUpPage(driver, log)
                 .fillRegistrationForm()
                 .inputPosition("Manager")
                 .clickSignUpButton();
@@ -31,14 +31,14 @@ public class PartnerRegistrationTest extends BaseTest {
         // Verification
         WebElement successContent = driver.findElement(By.id("content"));
         Assert.assertTrue("Success message is not present on the page", successContent.isDisplayed());
-        CongratsNgoPage congratsNgoPage = new CongratsNgoPage(driver);
+        CongratsNgoPage congratsNgoPage = new CongratsNgoPage(driver, log);
         congratsNgoPage.switchToMailHog();
 
         //Clicking on confirmation link. Congratulation message!
-        MailHogPage mailHogPage = new MailHogPage(driver);
+        MailHogPage mailHogPage = new MailHogPage(driver, log);
         mailHogPage.recentEmailMessage();
         mailHogPage.clickConfirmationLink();
-        NewConfirmationPage newConfirmationPage = new NewConfirmationPage(driver);
+        NewConfirmationPage newConfirmationPage = new NewConfirmationPage(driver, log);
         newConfirmationPage.switchToLastTab();
         newConfirmationPage.waitForConfirmationMessage();
 
