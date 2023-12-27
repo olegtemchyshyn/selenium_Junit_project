@@ -27,7 +27,6 @@ public class MailHogPage extends BasePageObject {
             try { sleep(2000);
                 recentEmailMessageElement = driver.findElement(By.xpath("//div[contains(text(),'" + emailToWait + "')]"));
             } catch (org.openqa.selenium.NoSuchElementException e) {
-                driver.navigate().refresh();
             }
         }
         // Email message is visible, click on it

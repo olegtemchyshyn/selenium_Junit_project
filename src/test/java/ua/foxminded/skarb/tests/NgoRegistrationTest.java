@@ -22,6 +22,9 @@ public class NgoRegistrationTest extends BaseTest {
         Assertions.assertEquals(ngoUrl, driver.getCurrentUrl());
         log.info("NGO page was open");
 
+//        DataGenerator dataGenerator = new DataGenerator();
+//        String name = dataGenerator.getName();
+
         String firstName = DataGenerator.generateFirstName();
         String lastName = DataGenerator.generateLastName();
         String email = firstName + "." + lastName + "@skarb.ngo";
