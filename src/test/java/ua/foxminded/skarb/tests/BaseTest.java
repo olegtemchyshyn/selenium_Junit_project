@@ -1,13 +1,13 @@
-package ua.foxminded.skarb.utils;
+package ua.foxminded.skarb.tests;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BaseTest extends TestUtilities {
+public class BaseTest {
 
     protected WebDriver driver;
     protected Logger log;
@@ -33,5 +33,4 @@ public class BaseTest extends TestUtilities {
             e.printStackTrace();
         }
     }
-
 }

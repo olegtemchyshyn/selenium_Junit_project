@@ -39,20 +39,21 @@ public class NgoSignUpPage extends BasePageObject {
 
     public NgoSignUpPage(WebDriver driver, Logger log) {
         super(driver, log);
+        generatedDataForRegestrationNgo();
         PageFactory.initElements(driver, this);
     }
 
     public void generatedDataForRegestrationNgo() {
-        DataGenerator dataGenerator = new DataGenerator();
-        this.randomFirstName = dataGenerator.dataGenerator(5);
-        this.randomLastName = dataGenerator.dataGenerator(5);
-        this.domain = dataGenerator.domainExample();
+        this.randomFirstName = DataGenerator.dataGenerator(5);
+        this.randomLastName = DataGenerator.dataGenerator(5);
+        this.domain = DataGenerator.domainExample();
         this.randomEmail = this.randomFirstName + "." + this.randomLastName + this.domain;
-        this.randomPassword = dataGenerator.generatePassword();
-        this.randomOrganizationName = dataGenerator.companyNameGenerator(4);
+        this.randomPassword = DataGenerator.generatePassword();
+        this.randomOrganizationName = DataGenerator.companyNameGenerator(4);
     }
 
     public void inputRandomEmailmail() {
+        log.info("random email:" + randomEmail);
         emailElement.sendKeys(randomEmail);
         log.info("Email was written: " + randomEmail);
     }
@@ -108,5 +109,26 @@ public class NgoSignUpPage extends BasePageObject {
         signUpButton.click();
         log.info("Sign Up button was clicked.");
         return new CongratsNgoPage(driver, log);
+    }
+
+    public void inputEmail(String email) {
+        emailElement.sendKeys(email);
+        log.info("Email was written: " + email);
+    }
+
+    public void inputFirstName(String firstName) {
+        firstNameElement.sendKeys(firstName);
+        log.info("First name was written: " + firstName);
+    }
+
+    public void inputLastName(String lastName) {
+        lastNameElement.sendKeys(lastName);
+        log.info("Last name was written: " + lastName);
+    }
+
+    public void inputPasswords(String password) {
+        passwordElement.sendKeys(password);
+        confirmPasswordElement.sendKeys(password);
+        log.info("Password & Confirmation were written");
     }
 }

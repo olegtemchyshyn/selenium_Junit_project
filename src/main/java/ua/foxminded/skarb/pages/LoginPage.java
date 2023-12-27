@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePageObject {
-    private String randomEmail;
-    private String randomPassword;
 
     @FindBy(id = "login")
     private WebElement inputLoginField;
@@ -19,26 +17,24 @@ public class LoginPage extends BasePageObject {
 
     public LoginPage(WebDriver driver, Logger log) {
         super(driver, log);
-        NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log);
+//        NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log);
         PageFactory.initElements(driver, this);
-        this.randomEmail = randomEmail;
-        this.randomPassword = randomPassword;
     }
 
-    public void typeLogin() {
-        inputLoginField.sendKeys( randomEmail);
-        log.info("Login field '" + randomEmail + "' email was used");
+    public void typeLogin(String login) {
+        inputLoginField.sendKeys(login);
+        log.info("Login field '" + login + "' email was used");
     }
 
-    public void typePassword() {
-        inputPasswordField.sendKeys(randomPassword);
-        log.info("Password field '" + randomPassword + "' password was used");
+    public void typePassword(String password) {
+        inputPasswordField.sendKeys(password);
+        log.info("Password field '" + password + "' password was used");
     }
 
-    public PrivatePage clickEnterButton() {
+    public void clickEnterButton() {
         enterButton.click();
         log.info("Enter button was clicked.");
-        return new PrivatePage(driver, log);
+        new PrivatePage(driver, log);
     }
 }
 
