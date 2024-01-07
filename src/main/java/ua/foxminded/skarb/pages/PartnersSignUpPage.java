@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import static ua.foxminded.skarb.utils.DataGenerator.*;
-
 public class PartnersSignUpPage extends BasePageObject {
 
     @FindBy(xpath = "//button[@name='submit']")
@@ -31,12 +29,6 @@ public class PartnersSignUpPage extends BasePageObject {
     private WebElement categoryElement;
     @FindBy(id = "positionInOrganization")
     private WebElement positionInOrganizationElement;
-    String randomFirstName = dataGenerator(6);
-    String randomLastName = dataGenerator(7);
-    String domain = domainCorporate();
-    String randomEmail = randomFirstName + "." + randomLastName + domain;
-    String randomPassword = generatePassword();
-    String randomOrganizationName = companyNameGenerator(4);
 
     public PartnersSignUpPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -44,21 +36,21 @@ public class PartnersSignUpPage extends BasePageObject {
     }
 
     // Enter random email
-    public void inputRandomEmail() {
-        emailElement.sendKeys(randomEmail);
-        log.info("Email was written: " + randomEmail);
+    public void inputRandomEmail(String email) {
+        emailElement.sendKeys(email);
+        log.info("Email was written: " + email);
     }
 
     // enter random first name
-    public void inputRandomFirstName() {
-        firstNameElement.sendKeys(randomFirstName);
-        log.info("First name was written: " + randomFirstName);
+    public void inputRandomFirstName(String firsName) {
+        firstNameElement.sendKeys(firsName);
+        log.info("First name was written: " + firsName);
     }
 
     // enter random last name
-    public void inputRandomLastName() {
-        lastNameElement.sendKeys(randomLastName);
-        log.info("Last name was written: " + randomLastName);
+    public void inputRandomLastName(String lastName) {
+        lastNameElement.sendKeys(lastName);
+        log.info("Last name was written: " + lastName);
     }
 
     // click on "Female" rondo button
@@ -68,16 +60,16 @@ public class PartnersSignUpPage extends BasePageObject {
     }
 
     // enter password and confirmation
-    public void inputRandomPasswords() {
-        passwordElement.sendKeys(randomPassword);
-        confirmPasswordElement.sendKeys(randomPassword);
+    public void inputRandomPasswords(String password) {
+        passwordElement.sendKeys(password);
+        confirmPasswordElement.sendKeys(password);
         log.info("Password & Confirmation were written.");
     }
 
     // enter organization random name
-    public void inputRandomOrganizationName() {
-        organizationNameElement.sendKeys(randomOrganizationName);
-        log.info("Organization name was written: " + randomOrganizationName);
+    public void inputRandomOrganizationName(String organization) {
+        organizationNameElement.sendKeys(organization);
+        log.info("Organization name was written: " + organization);
     }
 
     // Select category "Programming"
@@ -96,13 +88,13 @@ public class PartnersSignUpPage extends BasePageObject {
     }
 
     //fill application with one method
-    public PartnersSignUpPage fillRegistrationForm() {
-        inputRandomEmail();
-        inputRandomFirstName();
-        inputRandomLastName();
+    public PartnersSignUpPage fillRegistrationForm(String email, String firstName, String lastName, String password, String organization) {
+        inputRandomEmail(email);
+        inputRandomFirstName(firstName);
+        inputRandomLastName(lastName);
         clickFemaleRondoButon();
-        inputRandomPasswords();
-        inputRandomOrganizationName();
+        inputRandomPasswords(password);
+        inputRandomOrganizationName(organization);
         selectProgrammingCategory();
         return this;
     }

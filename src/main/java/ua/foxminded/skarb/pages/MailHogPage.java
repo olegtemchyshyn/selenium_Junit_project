@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MailHogPage extends BasePageObject {
+
     @FindBy(xpath = "//div[@id='content']//h3[@class='display-3 text-center']")
     private WebElement emailConfirmationContentElement;
     @FindBy(xpath = "//div[@class='msglist-message row ng-scope']//div[contains(text(),'a few seconds ago')]")
@@ -24,7 +25,7 @@ public class MailHogPage extends BasePageObject {
     public void waitForEmail(String emailToWait) {
         WebElement recentEmailMessageElement = null;
         while (recentEmailMessageElement == null) {
-            try { sleep(2000);
+            try {
                 recentEmailMessageElement = driver.findElement(By.xpath("//div[contains(text(),'" + emailToWait + "')]"));
             } catch (org.openqa.selenium.NoSuchElementException e) {
             }

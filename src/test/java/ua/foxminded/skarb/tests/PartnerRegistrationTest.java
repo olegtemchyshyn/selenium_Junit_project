@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ua.foxminded.skarb.pages.*;
+import ua.foxminded.skarb.utils.DataGenerator;
 
 public class PartnerRegistrationTest extends BaseTest {
     @Test
@@ -14,15 +15,21 @@ public class PartnerRegistrationTest extends BaseTest {
         //Open Home page URL. Click Plus Button
         String homePageUrl = "https://skarb.foxminded.ua/";
         driver.get(homePageUrl);
-        Assertions.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), homePageUrl);
+        Assertions.assertEquals(driver.getCurrentUrl(), homePageUrl, "The expected URL doesn't match current URL");
         log.info("Page was opened");
+
+        String organization = DataGenerator.companyNameGenerator(4);
+        String firstName = DataGenerator.dataGenerator(5);
+        String lastName = DataGenerator.dataGenerator(6);
+        String password = DataGenerator.generatePassword();
+        String email = firstName + "." + lastName + DataGenerator.domainCorporate();
 
         new HomePage(driver, log)
                 .clickPlusButton()
                 .clickPartnerButton();
 
         new PartnersSignUpPage(driver, log)
-                .fillRegistrationForm()
+                .fillRegistrationForm(email, firstName, lastName, password, organization)
                 .inputPosition("Manager")
                 .clickSignUpButton();
         log.info("Partners registration form was filled in");
@@ -35,7 +42,7 @@ public class PartnerRegistrationTest extends BaseTest {
 
         //Clicking on confirmation link. Congratulation message!
         MailHogPage mailHogPage = new MailHogPage(driver, log);
-      //  mailHogPage.waitForEmail(); //TODO
+        mailHogPage.waitForEmail(email);
         mailHogPage.clickConfirmationLink();
         NewConfirmationPage newConfirmationPage = new NewConfirmationPage(driver, log);
         newConfirmationPage.switchToLastTab();

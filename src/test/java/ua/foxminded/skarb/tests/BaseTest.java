@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.time.Duration;
+
 public class BaseTest {
 
     protected WebDriver driver;
@@ -24,6 +26,10 @@ public class BaseTest {
     public void tearDown() {
         log.info("Close driver");
         driver.quit();
+    }
+
+    public void implicitWait(int seconds) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
     }
 
     public void sleep(long m) {

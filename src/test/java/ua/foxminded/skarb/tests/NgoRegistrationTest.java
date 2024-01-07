@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import ua.foxminded.skarb.pages.*;
 import ua.foxminded.skarb.utils.DataGenerator;
 
-import java.time.Duration;
-
 public class NgoRegistrationTest extends BaseTest {
 
     @Test
@@ -22,13 +20,12 @@ public class NgoRegistrationTest extends BaseTest {
         Assertions.assertEquals(ngoUrl, driver.getCurrentUrl());
         log.info("NGO page was open");
 
-//        DataGenerator dataGenerator = new DataGenerator();
-//        String name = dataGenerator.getName();
-
-        String firstName = DataGenerator.generateFirstName();
-        String lastName = DataGenerator.generateLastName();
-        String email = firstName + "." + lastName + "@skarb.ngo";
+        String organization = DataGenerator.companyNameGenerator(4);
+        String firstName = DataGenerator.dataGenerator(5);
+        String lastName = DataGenerator.dataGenerator(6);
         String password = DataGenerator.generatePassword();
+        String position = DataGenerator.generatePosition();
+        String email = firstName + "." + lastName + DataGenerator.domainCorporate();
 
         NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log);
         ngoSignUpPage.inputEmail(email);
@@ -36,10 +33,10 @@ public class NgoRegistrationTest extends BaseTest {
         ngoSignUpPage.inputLastName(lastName);
         ngoSignUpPage.clickMaleRondoButon();
         ngoSignUpPage.inputPasswords(password);
-        ngoSignUpPage.inputRandomOrganizationName();
+        ngoSignUpPage.inputRandomOrganizationName(organization);
         ngoSignUpPage.selectProgrammingCategory();
-        ngoSignUpPage.inputPosition("Manager");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+        ngoSignUpPage.inputPosition(position);
+        implicitWait(3);
         ngoSignUpPage.clickSignUpButton();
         log.info("NGO registration form was filled in");
 

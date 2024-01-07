@@ -17,7 +17,6 @@ public class LoginPage extends BasePageObject {
 
     public LoginPage(WebDriver driver, Logger log) {
         super(driver, log);
-//        NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log);
         PageFactory.initElements(driver, this);
     }
 

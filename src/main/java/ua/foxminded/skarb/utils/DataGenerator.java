@@ -1,17 +1,41 @@
 package ua.foxminded.skarb.utils;
-
 import org.apache.commons.lang.RandomStringUtils;
-
 import java.time.LocalTime;
 import java.util.Random;
 
 public class DataGenerator {
-    static Random random = new Random();
 
+    private String organizationName;
+    private static String firstName;
+    private static String lastName;
+    private String email = firstName + "." + lastName;
+
+   /* // Getters
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getOrganizationName() { return organizationName; }
+    public String getEmail() { return email; }
+
+    public static DataGenerator testData() {
+        return Instancio.of(DataGenerator.class)
+                .generate(field(DataGenerator::getFirstName), gen -> gen.text().pattern("#C#c#c#c#c#c"))
+                .generate(field(DataGenerator::getLastName), gen -> gen.text().pattern("#C#c#c#c#c#c"))
+                .generate(field(DataGenerator::getOrganizationName), gen -> gen.text().pattern("#C#c#c#c#c#c#c#c#c"))
+                .generate(field(DataGenerator::getEmail), gen -> gen.text().pattern("#c#c#c#c#c#c@skarb.ngo"))
+                .create();
+    }*/
+
+    static Random random = new Random();
     public static String generateFirstName() {
         String[] firstNames = {"Wayneee", "Igorrr", "Samennn", "Rushabhhh", "Vasylll"};
         int randomIndex = random.nextInt(firstNames.length);
         return firstNames[randomIndex];
+    }
+
+    public static String generatePosition() {
+        String[] position = {"Developer", "Engineer", "Product Manager", "Analyst", "Systems Administrator"};
+        int randomIndex = random.nextInt(position.length);
+        return position[randomIndex];
     }
 
     public static String generateLastName() {

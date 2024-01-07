@@ -9,12 +9,9 @@ import org.openqa.selenium.support.ui.Select;
 import ua.foxminded.skarb.utils.DataGenerator;
 
 public class NgoSignUpPage extends BasePageObject {
-    private String randomFirstName;
-    private String randomLastName;
-    private String domain;
+
     public String randomEmail;
     public String randomPassword;
-    private String randomOrganizationName;
 
     @FindBy(id = "email")
     private WebElement emailElement;
@@ -39,35 +36,7 @@ public class NgoSignUpPage extends BasePageObject {
 
     public NgoSignUpPage(WebDriver driver, Logger log) {
         super(driver, log);
-        generatedDataForRegestrationNgo();
         PageFactory.initElements(driver, this);
-    }
-
-    public void generatedDataForRegestrationNgo() {
-        this.randomFirstName = DataGenerator.dataGenerator(5);
-        this.randomLastName = DataGenerator.dataGenerator(5);
-        this.domain = DataGenerator.domainExample();
-        this.randomEmail = this.randomFirstName + "." + this.randomLastName + this.domain;
-        this.randomPassword = DataGenerator.generatePassword();
-        this.randomOrganizationName = DataGenerator.companyNameGenerator(4);
-    }
-
-    public void inputRandomEmailmail() {
-        log.info("random email:" + randomEmail);
-        emailElement.sendKeys(randomEmail);
-        log.info("Email was written: " + randomEmail);
-    }
-
-    // enter random first name
-    public void inputRandomFirstName() {
-        firstNameElement.sendKeys(randomFirstName);
-        log.info("First name was written: " + randomFirstName);
-    }
-
-    // enter random last name
-    public void inputRandomLastName() {
-        lastNameElement.sendKeys(randomLastName);
-        log.info("Last name was written: " + randomLastName);
     }
 
     // click on "Female" rondo button
@@ -76,17 +45,10 @@ public class NgoSignUpPage extends BasePageObject {
         log.info("Sex:Male was chosen.");
     }
 
-    // enter password and confirmation
-    public void inputRandomPasswords() {
-        passwordElement.sendKeys(randomPassword);
-        confirmPasswordElement.sendKeys(randomPassword);
-        log.info("Password & Confirmation were written");
-    }
-
     // enter organization random name
-    public void inputRandomOrganizationName() {
-        organizationNameElement.sendKeys(randomOrganizationName);
-        log.info("Organization name was written: " + randomOrganizationName);
+    public void inputRandomOrganizationName(String organization) {
+        organizationNameElement.sendKeys(organization);
+        log.info("Organization name was written: " + organization);
     }
 
     //Type partners' occupation

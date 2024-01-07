@@ -4,17 +4,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import ua.foxminded.skarb.pages.CongratsNgoPage;
-import ua.foxminded.skarb.pages.MailHogPage;
-import ua.foxminded.skarb.pages.NewConfirmationPage;
-import ua.foxminded.skarb.pages.NgoSignUpPage;
+import ua.foxminded.skarb.pages.*;
 import ua.foxminded.skarb.tests.BaseTest;
-
-import java.time.Duration;
+import ua.foxminded.skarb.utils.DataGenerator;
 
 public class NgoRegistrationParameterizedTest extends BaseTest {
 
-    @RepeatedTest(1)
+    @RepeatedTest(2)
     public void registerNgo() {
         log.info("Starting register a NGO");
 
@@ -22,19 +18,27 @@ public class NgoRegistrationParameterizedTest extends BaseTest {
         String ngoUrl = "https://skarb.foxminded.ua/registration/organizations?";
         driver.get(ngoUrl);
         //Assertion to check if the current URL is open
-        Assertions.assertEquals("The expected URL doesn't match current URL", driver.getCurrentUrl(), ngoUrl);
+        Assertions.assertEquals(driver.getCurrentUrl(), ngoUrl, "The expected URL doesn't match current URL");
         log.info("NGO page was open");
 
-        NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log );
-        ngoSignUpPage.inputRandomEmailmail();
-        ngoSignUpPage.inputRandomFirstName();
-        ngoSignUpPage.inputRandomLastName();
+        String organization = DataGenerator.companyNameGenerator(4);
+        String firstName = DataGenerator.dataGenerator(5);
+        String lastName = DataGenerator.dataGenerator(6);
+        String password = DataGenerator.generatePassword();
+        String position = DataGenerator.generatePosition();
+        String email = firstName + "." + lastName + DataGenerator.domainCorporate();
+
+        NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log);
+        ngoSignUpPage.inputEmail(email);
+        ngoSignUpPage.inputFirstName(firstName);
+        ngoSignUpPage.inputLastName(lastName);
         ngoSignUpPage.clickMaleRondoButon();
-        ngoSignUpPage.inputRandomPasswords();
-        ngoSignUpPage.inputRandomOrganizationName();
+        sleep(2000);
+        ngoSignUpPage.inputPasswords(password);
+        ngoSignUpPage.inputRandomOrganizationName(organization);
         ngoSignUpPage.selectProgrammingCategory();
-        ngoSignUpPage.inputPosition("Manager");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+        ngoSignUpPage.inputPosition(position);
+        implicitWait(4);
         ngoSignUpPage.clickSignUpButton();
         log.info("NGO registration form was filled in");
 
@@ -46,7 +50,7 @@ public class NgoRegistrationParameterizedTest extends BaseTest {
 
         //Clicking on confirmation link. Congratulation message!
         MailHogPage mailHogPage = new MailHogPage(driver, log);
-       // mailHogPage.waitForEmail(); //TODO
+        mailHogPage.waitForEmail(email);
         mailHogPage.clickConfirmationLink();
         NewConfirmationPage newConfirmationPage = new NewConfirmationPage(driver, log);
         newConfirmationPage.switchToLastTab();
@@ -59,15 +63,15 @@ public class NgoRegistrationParameterizedTest extends BaseTest {
 
         newConfirmationPage.switchToLogin();
 
-//        LoginPage loginPage = new LoginPage(driver, log);
-//        loginPage.typeLogin();
-//        loginPage.typePassword();
-//        loginPage.clickEnterButton();
+        LoginPage loginPage = new LoginPage(driver, log);
+        loginPage.typeLogin(email);
+        loginPage.typePassword(password);
+        loginPage.clickEnterButton();
 
         //Verification,dashboard URL verification
         String expectedUrl = "https://skarb.foxminded.ua/";
         String actualUrl = driver.getCurrentUrl();
-        Assertions.assertEquals("Actual page URL is not the same as expected", expectedUrl, actualUrl);
+        Assertions.assertEquals(expectedUrl, actualUrl, "Actual page URL is not the same as expected");
         log.info("User successfully log in!");
     }
 
