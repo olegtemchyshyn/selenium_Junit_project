@@ -26,11 +26,13 @@ public class VolunteerRegistrationTest extends BaseTest {
         String email = firstName + "." + lastName + DataGenerator.domainExample();
 
         //Complete the fields on the registration form.
-        VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage(driver, log);
-        volunteersSignUpPage.inputFirstName(firstName);
-        volunteersSignUpPage.inputLastName(lastName);
-        volunteersSignUpPage.inputEmail(email);
-        volunteersSignUpPage.inputPasswords(password);
+        VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage.Builder(driver, log)
+                .withFirstName(firstName)
+                .withLastName(lastName)
+                .withEmail(email)
+                .withPassword(password)
+                .build();
+
         volunteersSignUpPage.selectProgrammingCategory();
         implicitWait(3);
         volunteersSignUpPage.clickSignUpButton();

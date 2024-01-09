@@ -24,10 +24,53 @@ public class VolunteersSignUpPage extends BasePageObject {
     @FindBy(xpath = "//button[@name='submit']")
     private WebElement signUpButton;
 
-
     public VolunteersSignUpPage(WebDriver driver, Logger log) {
         super(driver, log);
         PageFactory.initElements(driver, this);
+    }
+
+    public static class Builder {
+        private String email;
+        private String firstName;
+        private String lastName;
+        private String password;
+        private WebDriver driver;
+        private Logger log;
+
+        public Builder(WebDriver driver, Logger log) {
+            this.driver = driver;
+            this.log = log;
+        }
+
+        public Builder withEmail(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public Builder withFirstName(String firstName) {
+            this.firstName = firstName;
+            return this;
+        }
+
+        public Builder withLastName(String lastName) {
+            this.lastName = lastName;
+            return this;
+        }
+
+        public Builder withPassword(String password) {
+            this.password = password;
+            return this;
+        }
+
+        public VolunteersSignUpPage build() {
+            VolunteersSignUpPage volunteer = new VolunteersSignUpPage(driver, log);
+            volunteer.inputEmail(this.email);
+            volunteer.inputFirstName(this.firstName);
+            volunteer.inputLastName(this.lastName);
+            volunteer.inputPasswords(this.password);
+            volunteer.selectProgrammingCategory();
+            return volunteer;
+        }
     }
 
     public void inputEmail(String email) {

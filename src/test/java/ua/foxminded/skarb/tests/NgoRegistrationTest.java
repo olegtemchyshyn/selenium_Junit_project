@@ -25,7 +25,7 @@ public class NgoRegistrationTest extends BaseTest {
         String lastName = DataGenerator.dataGenerator(6);
         String password = DataGenerator.generatePassword();
         String position = DataGenerator.generatePosition();
-        String email = firstName + "." + lastName + DataGenerator.domainCorporate();
+        String email = firstName + "." + lastName + DataGenerator.domainExample();
 
         NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log);
         ngoSignUpPage.inputEmail(email);
