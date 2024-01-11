@@ -1,4 +1,4 @@
-package ua.foxminded.skarb.utils;
+package ua.foxminded.skarb.testdata;
 import org.apache.commons.lang.RandomStringUtils;
 import java.time.LocalTime;
 import java.util.Random;

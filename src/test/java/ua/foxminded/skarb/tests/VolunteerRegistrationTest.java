@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ua.foxminded.skarb.pages.VolunteersSignUpPage;
-import ua.foxminded.skarb.utils.DataGenerator;
+import ua.foxminded.skarb.testdata.DataGenerator;
+import ua.foxminded.skarb.builder.Volunteer;
 
 public class VolunteerRegistrationTest extends BaseTest {
 
@@ -25,17 +26,22 @@ public class VolunteerRegistrationTest extends BaseTest {
         String password = DataGenerator.generatePassword();
         String email = firstName + "." + lastName + DataGenerator.domainExample();
 
-        //Complete the fields on the registration form.
-        VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage.Builder(driver, log)
+        // Use the Volunteer.Builder to create a Volunteer instance
+        Volunteer volunteer = new Volunteer.Builder()
+                .withEmail(email)
                 .withFirstName(firstName)
                 .withLastName(lastName)
-                .withEmail(email)
                 .withPassword(password)
                 .build();
 
-        volunteersSignUpPage.selectProgrammingCategory();
-        implicitWait(3);
-        volunteersSignUpPage.clickSignUpButton();
+        // Use the volunteer's data to fill in the sign-up page
+        VolunteersSignUpPage signUpPage = new VolunteersSignUpPage(driver, log);
+        signUpPage.inputEmail(volunteer.getEmail());
+        signUpPage.inputFirstName(volunteer.getFirstName());
+        signUpPage.inputLastName(volunteer.getLastName());
+        signUpPage.inputPasswords(volunteer.getPassword());
+        signUpPage.selectProgrammingCategory();
+        signUpPage.clickSignUpButton();
 
         //Verification, new URL verification
         String expectedUrl = "https://skarb.foxminded.ua/registration/result/success";

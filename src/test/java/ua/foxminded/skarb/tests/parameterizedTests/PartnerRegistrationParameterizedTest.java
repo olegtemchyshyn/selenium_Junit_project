@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ua.foxminded.skarb.pages.*;
 import ua.foxminded.skarb.tests.BaseTest;
-import ua.foxminded.skarb.utils.DataGenerator;
+import ua.foxminded.skarb.testdata.DataGenerator;
 
 public class PartnerRegistrationParameterizedTest extends BaseTest {
     @ParameterizedTest
