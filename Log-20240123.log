@@ -1,0 +1,111 @@
+2024-01-23 15:49:41.255 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Create driver: Chrome
+2024-01-23 15:49:41.665 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Starting register a Volunteer
+2024-01-23 15:49:44.324 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Volunteer page was open
+2024-01-23 15:49:44.329 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Registration form completed
+2024-01-23 15:49:44.481 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Email was written: Rfjp.Uwbyx@example.com
+2024-01-23 15:49:44.523 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - First name was written: Rfjp
+2024-01-23 15:49:44.572 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Last name was written: Uwbyx
+2024-01-23 15:49:44.647 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Password & Confirmation were written
+2024-01-23 15:49:44.774 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - 'Programming' category was chosen
+2024-01-23 15:49:45.885 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Sign Up button was clicked.
+2024-01-23 15:49:45.886 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Registration form completed
+2024-01-23 15:49:45.915 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Assertions successfully validated
+2024-01-23 15:49:45.916 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Close driver
+2024-01-23 15:55:11.441 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Create driver: Chrome
+2024-01-23 15:55:11.853 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Starting register a Volunteer
+2024-01-23 15:55:13.422 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Volunteer page was open
+2024-01-23 15:55:13.427 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Registration form completed
+2024-01-23 15:55:13.583 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Email was written: Eimt.Teiow@example.com
+2024-01-23 15:55:13.626 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - First name was written: Eimt
+2024-01-23 15:55:13.668 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Last name was written: Teiow
+2024-01-23 15:55:13.739 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Password & Confirmation were written
+2024-01-23 15:55:13.869 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - 'Programming' category was chosen
+2024-01-23 15:55:14.992 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Sign Up button was clicked.
+2024-01-23 15:55:14.993 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Registration form completed
+2024-01-23 15:55:15.024 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Assertions successfully validated
+2024-01-23 15:55:15.026 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Close driver
+2024-01-23 19:52:44.102 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Create driver: Chrome
+2024-01-23 19:52:44.218 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Starting register a Volunteer
+2024-01-23 19:52:46.255 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Volunteer page was open
+2024-01-23 19:52:46.257 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Registration form completed
+2024-01-23 19:52:46.400 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Email was written: Axve.Lnqtt@example.com
+2024-01-23 19:52:46.442 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - First name was written: Axve
+2024-01-23 19:52:46.493 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Last name was written: Lnqtt
+2024-01-23 19:52:46.553 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Password & Confirmation were written
+2024-01-23 19:52:46.683 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - 'Programming' category was chosen
+2024-01-23 19:52:47.653 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Sign Up button was clicked.
+2024-01-23 19:52:47.655 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Registration form completed
+2024-01-23 19:52:47.684 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Assertions successfully validated
+2024-01-23 19:52:47.686 [main] INFO  ua.foxminded.skarb.tests.VolunteerRegistrationTest - Close driver
+2024-01-23 20:58:15.317 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Create driver: Chrome
+2024-01-23 20:58:15.800 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Starting register a Partner
+2024-01-23 20:58:17.800 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Page was opened
+2024-01-23 20:58:19.347 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Email was written: Ywgi.Fvdse@skarb.ngo
+2024-01-23 20:58:19.373 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - First name was written: Ywgi
+2024-01-23 20:58:19.400 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Last name was written: Fvdse
+2024-01-23 20:58:19.428 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Sex:Female was chosen.
+2024-01-23 20:58:19.481 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Password & Confirmation were written.
+2024-01-23 20:58:19.510 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Organization name was written: VODY
+2024-01-23 20:58:19.657 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - 'Programming' category was chosen.
+2024-01-23 20:58:19.683 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Position: Manager was written.
+2024-01-23 20:58:20.643 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Sign Up button was clicked
+2024-01-23 20:58:20.645 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Partners registration form was filled in
+2024-01-23 20:58:23.168 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Mail tab was open
+2024-01-23 20:59:00.095 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Driver found registration confirmation email
+2024-01-23 20:59:00.205 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Confirmation link was clicked
+2024-01-23 20:59:02.000 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Your email was confirmed. Congratulation!
+2024-01-23 20:59:02.003 [main] INFO  ua.foxminded.skarb.tests.PartnerRegistrationTest - Close driver
+2024-01-23 21:32:32.747 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Create driver: Chrome
+2024-01-23 21:32:33.211 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Starting register a NGO
+2024-01-23 21:32:34.982 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO page was open
+2024-01-23 21:32:35.107 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Email was written: Hugo.Ajmnq@example.com
+2024-01-23 21:32:35.136 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - First name was written: Hugo
+2024-01-23 21:32:35.160 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Last name was written: Ajmnq
+2024-01-23 21:32:35.187 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Sex:Male was chosen.
+2024-01-23 21:32:35.241 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Password & Confirmation were written
+2024-01-23 21:32:35.271 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Organization name was written: MGGT
+2024-01-23 21:32:35.406 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - 'Programming' category was chosen
+2024-01-23 21:32:35.433 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Position: Analyst was written.
+2024-01-23 21:32:36.485 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Sign Up button was clicked.
+2024-01-23 21:32:36.486 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO registration form was filled in
+2024-01-23 21:32:39.153 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Mail tab was open
+2024-01-23 21:33:16.123 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Close driver
+2024-01-23 21:41:41.948 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Create driver: Chrome
+2024-01-23 21:41:42.431 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Starting register a NGO
+2024-01-23 21:41:44.559 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO page was open
+2024-01-23 21:41:44.693 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Email was written: Ybyi.Ycyfz@example.com
+2024-01-23 21:41:44.720 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - First name was written: Ybyi
+2024-01-23 21:41:44.745 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Last name was written: Ycyfz
+2024-01-23 21:41:44.772 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Sex:Male was chosen.
+2024-01-23 21:41:44.832 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Password & Confirmation were written
+2024-01-23 21:41:44.860 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Organization name was written: DFFT
+2024-01-23 21:41:44.996 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - 'Programming' category was chosen
+2024-01-23 21:41:45.024 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Position: Analyst was written.
+2024-01-23 21:41:46.073 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Sign Up button was clicked.
+2024-01-23 21:41:46.074 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO registration form was filled in
+2024-01-23 21:41:48.388 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Mail tab was open
+2024-01-23 21:42:49.625 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Close driver
+2024-01-23 21:43:53.619 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Create driver: Chrome
+2024-01-23 21:43:54.089 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Starting register a NGO
+2024-01-23 21:43:55.935 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO page was open
+2024-01-23 21:43:56.058 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Email was written: Huhl.Qtfws@example.com
+2024-01-23 21:43:56.085 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - First name was written: Huhl
+2024-01-23 21:43:56.109 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Last name was written: Qtfws
+2024-01-23 21:43:56.134 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Sex:Male was chosen.
+2024-01-23 21:43:56.192 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Password & Confirmation were written
+2024-01-23 21:43:56.221 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Organization name was written: UTEO
+2024-01-23 21:43:56.351 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - 'Programming' category was chosen
+2024-01-23 21:43:56.385 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Position: Analyst was written.
+2024-01-23 21:43:57.471 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Sign Up button was clicked.
+2024-01-23 21:43:57.472 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO registration form was filled in
+2024-01-23 21:44:00.214 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Mail tab was open
+2024-01-23 21:44:00.693 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Driver found registration confirmation email
+2024-01-23 21:44:00.781 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Confirmation link was clicked
+2024-01-23 21:44:02.097 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Your email was confirmed. Congratulation!
+2024-01-23 21:44:02.968 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Log In tab was open
+2024-01-23 21:44:03.023 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Login field 'Huhl.Qtfws@example.com' email was used
+2024-01-23 21:44:03.053 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Password field 'TEst@1234' password was used
+2024-01-23 21:44:03.552 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Enter button was clicked.
+2024-01-23 21:44:03.553 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Login button was clicked
+2024-01-23 21:44:04.291 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - User successfully log in!
+2024-01-23 21:44:04.295 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Close driver

@@ -35,7 +35,7 @@ public class NewConfirmationPage extends BasePageObject {
     }
 
     //Open new tab
-    public LoginPage switchToLogin() {
+    public static LoginPage switchToLogin() {
         String loginHandle = driver.getWindowHandle();
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://skarb.foxminded.ua/login");

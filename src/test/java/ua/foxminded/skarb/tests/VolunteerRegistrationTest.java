@@ -33,6 +33,7 @@ public class VolunteerRegistrationTest extends BaseTest {
                 .withLastName(lastName)
                 .withPassword(password)
                 .build();
+        log.info("Registration form completed");
 
         // Use the volunteer's data to fill in the sign-up page
         VolunteersSignUpPage signUpPage = new VolunteersSignUpPage(driver, log);
@@ -42,6 +43,7 @@ public class VolunteerRegistrationTest extends BaseTest {
         signUpPage.inputPasswords(volunteer.getPassword());
         signUpPage.selectProgrammingCategory();
         signUpPage.clickSignUpButton();
+        log.info("Registration form completed");
 
         //Verification, new URL verification
         String expectedUrl = "https://skarb.foxminded.ua/registration/result/success";
@@ -51,6 +53,7 @@ public class VolunteerRegistrationTest extends BaseTest {
         // Check success message
         WebElement successContent = driver.findElement(By.id("content"));
         Assertions.assertTrue(successContent.isDisplayed(), "Success message is not present on the page");
+        log.info("Assertions successfully validated");
     }
 
 }
