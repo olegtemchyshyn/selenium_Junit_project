@@ -1,12 +1,14 @@
 package ua.foxminded.skarb.configDB;
 
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
 public class VolunteerDB {
-
+    private static Logger log;
     private static Statement statement;
     private static Connection connection = null;
 
@@ -49,7 +51,7 @@ public class VolunteerDB {
 
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
-                System.out.println("Volunteer inserted into DB successfully");
+               log.info("Volunteer inserted into DB successfully");
             }
         }
     }
@@ -64,9 +66,9 @@ public class VolunteerDB {
 
             int rowsUpdated = preparedStatement.executeUpdate();
             if (rowsUpdated > 0) {
-                System.out.println("Email confirmation updated successfully for " + email);
+                log.info("Email confirmation updated successfully for " + email);
             } else {
-                System.out.println("No record was updated for " + email);
+                log.info("No record was updated for " + email);
             }
         }
     }
@@ -74,7 +76,7 @@ public class VolunteerDB {
     public static void finishConnection() throws SQLException {
         if (connection != null && !connection.isClosed()) {
             connection.close();
-            System.out.println("Connection Closed");
+            log.info("Connection Closed");
         }
     }
 }
