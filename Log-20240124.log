@@ -46,3 +46,27 @@
 2024-01-24 17:47:03.399 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Login button was clicked
 2024-01-24 17:47:03.406 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - User successfully log in!
 2024-01-24 17:47:03.409 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Close driver
+2024-01-24 19:07:33.345 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Create driver: Chrome
+2024-01-24 19:07:33.819 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Starting register a NGO
+2024-01-24 19:07:36.002 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO page was open
+2024-01-24 19:07:36.153 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Email was written: Ffch.Eaacv@example.com
+2024-01-24 19:07:36.180 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - First name was written: Ffch
+2024-01-24 19:07:36.205 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Last name was written: Eaacv
+2024-01-24 19:07:36.230 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Sex:Male was chosen.
+2024-01-24 19:07:36.284 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Password & Confirmation were written
+2024-01-24 19:07:36.308 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Organization name was written: NQNG
+2024-01-24 19:07:36.452 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - 'Programming' category was chosen
+2024-01-24 19:07:36.480 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Position: Product Manager was written.
+2024-01-24 19:07:37.502 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Sign Up button was clicked.
+2024-01-24 19:07:37.504 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - NGO registration form was filled in
+2024-01-24 19:07:40.059 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Mail tab was open
+2024-01-24 19:08:00.159 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Driver found registration confirmation email
+2024-01-24 19:08:00.402 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Confirmation link was clicked
+2024-01-24 19:08:01.731 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Your email was confirmed. Congratulation!
+2024-01-24 19:08:02.481 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Log In tab was open
+2024-01-24 19:08:02.534 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Login field 'Ffch.Eaacv@example.com' email was used
+2024-01-24 19:08:02.563 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Password field 'HJvb&3321' password was used
+2024-01-24 19:08:03.761 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Enter button was clicked.
+2024-01-24 19:08:03.763 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Login button was clicked
+2024-01-24 19:08:03.767 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - User successfully log in!
+2024-01-24 19:08:03.774 [main] INFO  ua.foxminded.skarb.tests.NgoRegistrationTest - Close driver
