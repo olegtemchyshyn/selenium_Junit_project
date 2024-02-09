@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ua.foxminded.skarb.configDB.VolunteerDB;
+import ua.foxminded.skarb.model.Volunteer;
 import ua.foxminded.skarb.pages.LoginPage;
 import ua.foxminded.skarb.pages.NewConfirmationPage;
 import ua.foxminded.skarb.pages.VolunteersSignUpPage;
@@ -15,6 +16,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class VolunteerDbRegistration extends BaseTest {
+
+    Volunteer randomVolunteer = Volunteer.getRandomVolunteer();
 
     @Test
     public void Volunteer() throws SQLException, IOException, ClassNotFoundException {
@@ -27,10 +30,10 @@ public class VolunteerDbRegistration extends BaseTest {
         Assertions.assertEquals(driver.getCurrentUrl(), url, "The expected URL doesn't match current URL");
         log.info("Volunteer page was open");
 
-        String firstName = DataGenerator.dataGenerator(5);
-        String lastName = DataGenerator.dataGenerator(6);
-        String password = DataGenerator.generatePassword();
-        String email = firstName + "." + lastName + DataGenerator.domainExample();
+        String firstName = randomVolunteer.getFirstName();
+        String lastName = randomVolunteer.getLastName();
+        String password = randomVolunteer.getPassword();
+        String email = randomVolunteer.getEmail();
 
         //Complete the fields on the registration form.
         VolunteersSignUpPage volunteersSignUpPage = new VolunteersSignUpPage(driver, log);

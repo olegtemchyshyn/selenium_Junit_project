@@ -4,11 +4,14 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import ua.foxminded.skarb.model.NGO;
 import ua.foxminded.skarb.pages.*;
 import ua.foxminded.skarb.tests.BaseTest;
 import ua.foxminded.skarb.testdata.DataGenerator;
 
 public class NgoRegistrationParameterizedTest extends BaseTest {
+
+    NGO randomNgo = NGO.getRandomNGO();
 
     @RepeatedTest(2)
     public void registerNgo() {
@@ -21,12 +24,12 @@ public class NgoRegistrationParameterizedTest extends BaseTest {
         Assertions.assertEquals(driver.getCurrentUrl(), ngoUrl, "The expected URL doesn't match current URL");
         log.info("NGO page was open");
 
-        String organization = DataGenerator.companyNameGenerator(4);
-        String firstName = DataGenerator.dataGenerator(5);
-        String lastName = DataGenerator.dataGenerator(6);
-        String password = DataGenerator.generatePassword();
-        String position = DataGenerator.generatePosition();
-        String email = firstName + "." + lastName + DataGenerator.domainCorporate();
+        String email = randomNgo.getEmail();
+        String firstName = randomNgo.getFirstName();
+        String lastName = randomNgo.getLastName();
+        String password = randomNgo.getPassword();
+        String organization = randomNgo.getOrganization();
+        String position = randomNgo.getPosition();
 
         NgoSignUpPage ngoSignUpPage = new NgoSignUpPage(driver, log);
         ngoSignUpPage.inputEmail(email);

@@ -1,13 +1,13 @@
 package ua.foxminded.skarb.builder;;
 
-public class Volunteer {
+public class VolunteerBuilder {
 
     private final String email;
     private String firstName;
     private String lastName;
     private String password;
 
-    private Volunteer(Builder builder) {
+    private VolunteerBuilder(Builder builder) {
         this.email = builder.email;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
@@ -58,8 +58,8 @@ public class Volunteer {
             return this;
         }
 
-        public Volunteer build() {
-            return new Volunteer(this);
+        public VolunteerBuilder build() {
+            return new VolunteerBuilder(this);
         }
     }
 }

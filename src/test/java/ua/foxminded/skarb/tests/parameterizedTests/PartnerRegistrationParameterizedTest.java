@@ -5,11 +5,14 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import ua.foxminded.skarb.model.Partner;
 import ua.foxminded.skarb.pages.*;
 import ua.foxminded.skarb.tests.BaseTest;
-import ua.foxminded.skarb.testdata.DataGenerator;
 
 public class PartnerRegistrationParameterizedTest extends BaseTest {
+
+    Partner randomPartner = Partner.getRandomPartner();
+
     @ParameterizedTest
     @ValueSource(strings = {"Manager", "Developer", "Tester", "CEO"})
     public void registerPartner(String position) {
@@ -21,11 +24,11 @@ public class PartnerRegistrationParameterizedTest extends BaseTest {
         Assertions.assertEquals(driver.getCurrentUrl(), homePageUrl, "The expected URL doesn't match current URL");
         log.info("Page was opened");
 
-        String organization = DataGenerator.companyNameGenerator(4);
-        String firstName = DataGenerator.dataGenerator(5);
-        String lastName = DataGenerator.dataGenerator(6);
-        String password = DataGenerator.generatePassword();
-        String email = firstName + "." + lastName + DataGenerator.domainCorporate();
+        String email = randomPartner.getEmail();
+        String firstName = randomPartner.getFirstName();
+        String lastName = randomPartner.getLastName();
+        String password = randomPartner.getPassword();
+        String organization = randomPartner.getOrganization();
 
 
         new HomePage(driver, log)
